@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-    //public GameObject button;
+    public GameObject button;
    
     void Update()
     {
@@ -16,7 +16,7 @@ public class PauseMenu : MonoBehaviour
         {
             if (GameIsPaused)
             {
-                //button.SetActive(true);
+                button.SetActive(true);
                 //Cursor.visible = false;
                 Resume(); 
             }
@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
-        Cursor.visible = GameIsPaused;
+        //Cursor.visible = GameIsPaused;
     }
     public void Resume()
     {
@@ -34,7 +34,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         //Cursor.visible = false;
-        //button.SetActive(true);
+        button.SetActive(true);
     }
     public void Pause()
     {
@@ -51,6 +51,6 @@ public class PauseMenu : MonoBehaviour
     public void Quit()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(0);
     }
 }
