@@ -11,16 +11,10 @@ public class EnemyHP : MonoBehaviour
         set
         {
             hp = value;
-            OnHPChanged();
+            OnEnemyHPChanged?.Invoke(value);
         }
     }
 
-    private void OnHPChanged()
-    {
-        if (hp <= 0)
-        {
-            // Trigger death animation and stuff
-            Destroy(gameObject);
-        }
-    }
+    public delegate void EnemyHPChanged(int newHP);
+    public event EnemyHPChanged OnEnemyHPChanged;
 }

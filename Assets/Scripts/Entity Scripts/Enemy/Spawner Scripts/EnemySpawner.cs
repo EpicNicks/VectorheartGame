@@ -14,6 +14,11 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private List<GameObject> enemyPrefabs = new List<GameObject> { };
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, 0.5f);
+    }
+
     private void Awake()
     {
         if (enemyPrefabs.Count == 0)
@@ -37,6 +42,9 @@ public class EnemySpawner : MonoBehaviour
 
     private void Spawn()
     {
-        Instantiate(enemyPrefabs[(int)enemiesSpawned++ % enemyPrefabs.Count], transform.position, Quaternion.identity, transform);
+        if (enemyPrefabs.Count > 0)
+        {
+            Instantiate(enemyPrefabs[(int)enemiesSpawned++ % enemyPrefabs.Count], transform.position, Quaternion.identity, transform);
+        }
     }
 }

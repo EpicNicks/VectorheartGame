@@ -6,12 +6,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
 public class ControlTypeSentinel : MonoBehaviour
 {
-    public void KeyboardInput(InputAction.CallbackContext ctx)
-    {
-        
-    }
 
-    public void ControllerInput(InputAction.CallbackContext ctx)
+    public void ListenInput(InputAction.CallbackContext ctx)
     {
 
     }
