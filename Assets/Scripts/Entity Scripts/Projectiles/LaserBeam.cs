@@ -66,9 +66,7 @@ public class LaserBeam : MonoBehaviour
         {
             if (curBounces < numDeflectionBounces)
             {
-                Debug.Log("wall");
                 Vector2 reflectDir = Vector2.Reflect(ray.direction, hit.normal);
-                Debug.Log(reflectDir);
                 float rot = 90 - Mathf.Atan2(reflectDir.y, reflectDir.x) * Mathf.Rad2Deg;
                 transform.eulerAngles = new Vector3(0, 0, -rot);
                 curBounces++;
