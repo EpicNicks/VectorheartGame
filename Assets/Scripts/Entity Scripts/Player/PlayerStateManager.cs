@@ -87,8 +87,6 @@ public class PlayerStateManager
         {
             if (curIdleTime >= psm.player.IdleSecondsToPlayIdleAnim)
             {
-                //TODO: Play idle animation
-                Debug.Log("Idle anim played");
                 curIdleTime = 0.0f;
             }
             curIdleTime += Time.deltaTime;
@@ -105,12 +103,19 @@ public class PlayerStateManager
             {
                 return this;
             }
+            if (ctx.action.name.Equals("Attack"))
+            {
+                return new AttackingState(psm);
+            }
+            if (ctx.action.name.Equals("Dash") && ctx.action.phase == InputActionPhase.Started)
+            {
+                return new DashState(psm);
+            }
             return this;
         }
 
         public override PlayerState DoState(InputAction.CallbackContext ctx)
         {
-            psm.move = ctx.ReadValue<Vector2>();
             if (psm.move == Vector2.zero)
             {
                 return new IdleState(psm);
@@ -136,11 +141,25 @@ public class PlayerStateManager
         public AttackingState(PlayerStateManager psm) : base(psm) { }
         public override PlayerState OnInput(InputAction.CallbackContext ctx)
         {
+            //auto transition
             return base.OnInput(ctx);
         }
 
         public override PlayerState DoState(InputAction.CallbackContext ctx)
         {
+            Vector3 frontOfPlayer = psm.player.transform.position + psm.player.transform.up * psm.player.AttackRadius;
+            foreach (RaycastHit2D hit in Physics2D.CircleCastAll(frontOfPlayer, psm.player.AttackRadius, Vector2.up))
+            {
+                float hitAngle = Vector2.Angle(psm.player.transform.position, hit.point);
+                if (hitAngle > -psm.player.AttackAngleDegrees && hitAngle < psm.player.AttackAngleDegrees)
+                {
+                    EnemyHP enemyHp = hit.transform.GetComponent<EnemyHP>();
+                    if (enemyHp != null)
+                    {
+                        enemyHp.HP -= psm.player.AttackDamage;
+                    }
+                }
+            }
             return base.DoState(ctx);
         }
 
@@ -175,8 +194,26 @@ public class PlayerStateManager
         private IEnumerator DashStrike()
         {
             Vector2 dashDirection = psm.move;
-            yield return null;
+            Vector2 initialPos = psm.player.transform.position;
+            Vector2 destination = initialPos + dashDirection * psm.player.DashDistance;
+            float elapsed = 0.0f;
+            if (psm.player.DashAttackHitbox)
+            {
+                psm.player.DashAttackHitbox.enabled = true;
+            }
+            
+            while (elapsed < psm.player.DashSeconds)
+            {
+                psm.player.transform.position = Vector2.Lerp(initialPos, destination, elapsed / psm.player.DashSeconds);
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
 
+            psm.player.transform.position = destination;
+            if (psm.player.DashAttackHitbox)
+            {
+                psm.player.DashAttackHitbox.enabled = false;
+            }
             hasCompletedDash = true;
         }
 
