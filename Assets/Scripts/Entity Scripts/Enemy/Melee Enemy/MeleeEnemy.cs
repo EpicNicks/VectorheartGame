@@ -10,6 +10,8 @@ public class MeleeEnemy : MonoBehaviour
     private EnemyHP hp;
     private GameObject player;
 
+    public Animator animator;
+
     [SerializeField]
     private float moveSpeed = 1.0f;
     [SerializeField]
@@ -17,6 +19,8 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField]
     private float attackCooldownSeconds = 3.0f;
     private float curAttackCooldownSeconds = 0.0f;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +60,7 @@ public class MeleeEnemy : MonoBehaviour
         if (curAttackCooldownSeconds >= attackCooldownSeconds)
         {
             //Make a cone slash
-
+            animator.SetTrigger("Attack");
             curAttackCooldownSeconds = 0.0f;
         }
         curAttackCooldownSeconds += Time.deltaTime;
