@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GridTest
+  m_Name: Plane
   m_Shader: {fileID: -6465566751694194690, guid: a8e1c65f766a38443b14e2f8a599b974, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -76,7 +76,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_446b3f33a0314ac1a211bb432bf1a141: 0.9
+    - Vector1_446b3f33a0314ac1a211bb432bf1a141: 0.89
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -104,9 +104,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_91a74f3ec27e458297095edeed965bfa: {r: 85.445015, g: 16.554104, b: 0, a: 0}
-    - Color_e3d6a700279542bbace10600ef5c5a46: {r: 1, g: 0.5694697, b: 0, a: 0}
-    - Vector2_965606fc9d85452380fd17bcb76a7dea: {r: 0.6, g: 0.6, b: 1.2, a: 0}
+    - Color_91a74f3ec27e458297095edeed965bfa: {r: 0, g: 17.11137, b: 21.361254, a: 0}
+    - Color_e3d6a700279542bbace10600ef5c5a46: {r: 0, g: 0.90322113, b: 1, a: 0}
+    - Vector2_965606fc9d85452380fd17bcb76a7dea: {r: 0.5, g: 0.5, b: 0.2, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
