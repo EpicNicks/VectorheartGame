@@ -49,13 +49,8 @@ public class LaserBeam : MonoBehaviour
         }
         else
         {
-
+            curBounces++;
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
     }
 
     private void CheckBounce()

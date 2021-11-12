@@ -24,15 +24,36 @@ public class CharacterInput : MonoBehaviour
     public float IdleSecondsToPlayIdleAnim => idleSecondsToPlayIdleAnim;
 
     [SerializeField]
-    private float dashDistance;
+    private float attackRadius = 1.0f;
+    public float AttackRadius => attackRadius;
+    [SerializeField]
+    private float attackAngleDegrees = 45.0f;
+    public float AttackAngleDegrees => attackAngleDegrees;
+    //rework into separate component if we decide to use powerups
+    [SerializeField]
+    private int attackDamage;
+    public int AttackDamage => attackDamage;
+
+    [SerializeField]
+    private float dashDistance = 3.0f;
     public float DashDistance => dashDistance;
 
     [SerializeField]
-    private float dashSeconds;
+    private float dashSeconds = 0.2f;
     public float DashSeconds => dashSeconds;
+    [SerializeField]
+    private Collider dashAttackHitbox;
+    public Collider DashAttackHitbox => dashAttackHitbox;
     #endregion
 
     private PlayerStateManager psm;
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position + transform.up * attackRadius, attackRadius);
+        Gizmos.DrawLine(transform.position, transform.position + Quaternion.Euler(0, 0, attackAngleDegrees) * transform.up * attackRadius * 2);
+        Gizmos.DrawLine(transform.position, transform.position + Quaternion.Euler(0, 0, -attackAngleDegrees) * transform.up * attackRadius * 2);
+    }
 
     private void Awake()
     {
