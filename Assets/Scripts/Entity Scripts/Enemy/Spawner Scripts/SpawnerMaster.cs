@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class SpawnerMaster : MonoBehaviour
 {
+    [SerializeField]
+    private int numOfWaves = 1;
+    private int curWave = 0;
     private bool waveStarted = false;
     private List<EnemySpawner> spawners;
 
@@ -21,9 +24,16 @@ public class SpawnerMaster : MonoBehaviour
 
     private void Update()
     {
-        if (curDelaySeconds >= waveDelaySeconds)
+        if (curWave < numOfWaves)
         {
-            EnableSpawners();
+            if (curDelaySeconds >= waveDelaySeconds)
+            {
+                EnableSpawners();
+            }
+            if (spawners.Where(s => s.WaveId == curWave).All(s => s.Exhausted))
+            {
+                curWave++;
+            }
         }
     }
 
@@ -33,7 +43,7 @@ public class SpawnerMaster : MonoBehaviour
         if (!waveStarted)
         {
             waveStarted = true;
-            spawners.ForEach(s => s.enabled = true);
+            spawners.Where(s => s.WaveId == curWave).ToList().ForEach(s => s.enabled = true);
         }
     }
     

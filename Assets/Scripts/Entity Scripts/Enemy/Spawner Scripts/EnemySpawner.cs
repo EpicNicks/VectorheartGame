@@ -5,11 +5,16 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
+    private int waveId = 1;
+    public int WaveId => waveId;
+    [SerializeField]
     private float spawnDelaySeconds = 1.0f;
     private float curSpawnSeconds = 0.0f;
     [SerializeField]
     private float maxEnemies = Mathf.Infinity;
     private float enemiesSpawned = 0;
+
+    public bool Exhausted => enemiesSpawned >= maxEnemies;
 
     [SerializeField]
     private List<GameObject> enemyPrefabs = new List<GameObject> { };
@@ -44,7 +49,10 @@ public class EnemySpawner : MonoBehaviour
     {
         if (enemyPrefabs.Count > 0)
         {
-            Instantiate(enemyPrefabs[(int)enemiesSpawned++ % enemyPrefabs.Count], transform.position, Quaternion.identity, transform);
+            if (!Exhausted)
+            {
+                Instantiate(enemyPrefabs[(int)enemiesSpawned++ % enemyPrefabs.Count], transform.position, Quaternion.identity, transform);
+            }
         }
     }
 }
