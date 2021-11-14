@@ -15,12 +15,12 @@ public class WinScreenScript : MonoBehaviour
             {
                 WinScreen.SetActive(false);
                 Time.timeScale = 1f;
-                Cursor.visible = false;
+                //Cursor.visible = false;
             }
             else
             {
                 WinScreen.SetActive(true);
-                Cursor.visible = true;
+                //Cursor.visible = true;
                 Time.timeScale = 0f;
             }
         }
@@ -31,5 +31,10 @@ public class WinScreenScript : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Main Menu");
+    }
+    public void GoToNextLevel()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
