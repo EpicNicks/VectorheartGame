@@ -12,12 +12,16 @@ public class MeleeEnemy : MonoBehaviour
 
     public Animator animator;
 
+    public int AttackAngleDegrees;
+    public int AttackDamage;
+    public int AttackRadius;
+
     [SerializeField]
     private float moveSpeed = 1.0f;
     [SerializeField]
     private float attackFromDist = 1.0f;
     [SerializeField]
-    private float attackCooldownSeconds = 3.0f;
+    private float attackCooldownSeconds = 2.0f;
     private float curAttackCooldownSeconds = 0.0f;
 
 
@@ -62,6 +66,19 @@ public class MeleeEnemy : MonoBehaviour
             //Make a cone slash
             animator.SetTrigger("Attack");
             curAttackCooldownSeconds = 0.0f;
+            Vector3 frontOfPlayer = transform.position + transform.up * AttackRadius;
+            foreach (RaycastHit2D hit in Physics2D.CircleCastAll(frontOfPlayer, AttackRadius, Vector2.up))
+            {
+                float hitAngle = Vector2.Angle(transform.position, hit.point);
+                if (hitAngle > -AttackAngleDegrees && hitAngle < AttackAngleDegrees)
+                {
+                    PlayerHP playerHP = hit.transform.GetComponent<PlayerHP>();
+                    if (playerHP != null)
+                    {
+                        playerHP.HP -= AttackDamage;
+                    }
+                }
+            }
         }
         curAttackCooldownSeconds += Time.deltaTime;
     }
