@@ -109,7 +109,7 @@ public class PlayerStateManager
             {
                 return this;
             }
-            if (ctx.action.name.Equals("Attack"))
+            if (ctx.action.name.Equals("Attack") && ctx.action.phase == InputActionPhase.Started)
             {
                 return new AttackingState(psm);
             }
