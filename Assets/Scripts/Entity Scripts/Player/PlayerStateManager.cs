@@ -68,7 +68,10 @@ public class PlayerStateManager
     {
         private float curIdleTime = 0.0f;
 
-        public IdleState(PlayerStateManager psm) : base(psm){}
+        public IdleState(PlayerStateManager psm) : base(psm)
+        {
+            psm.player.Anim?.SetBool("isRunning", false);
+        }
         public override PlayerState OnInput(InputAction.CallbackContext ctx)
         {
             if (ctx.action.name.Equals("Move"))
@@ -96,7 +99,10 @@ public class PlayerStateManager
 
     private class MovingState : PlayerState
     {
-        public MovingState(PlayerStateManager psm) : base(psm) { }
+        public MovingState(PlayerStateManager psm) : base(psm) 
+        {
+            psm.player.Anim?.SetBool("isRunning", true);
+        }
         public override PlayerState OnInput(InputAction.CallbackContext ctx)
         {
             if (ctx.action.name.Equals("Move"))
@@ -126,19 +132,18 @@ public class PlayerStateManager
 
         public override PlayerState OnUpdate()
         {
-            // simple move
-            // psm.player.transform.position += (Vector3)move * (psm.isSprinting ? psm.player.SprintSpeed : psm.player.MoveSpeed) * Time.deltaTime;
-
-            float angle = -(90 - Mathf.Atan2(psm.move.y, psm.move.x) * Mathf.Rad2Deg);
-            psm.player.transform.rotation = Quaternion.AngleAxis(angle, psm.player.transform.forward);
-            psm.player.transform.position += psm.player.transform.up * (psm.isSprinting ? psm.player.SprintSpeed : psm.player.MoveSpeed) * Time.deltaTime;
+            psm.player.transform.rotation = Quaternion.LookRotation(new Vector3(psm.move.x, psm.move.y, 0), psm.player.transform.up);
+            psm.player.transform.position += psm.player.transform.forward * (psm.isSprinting ? psm.player.SprintSpeed : psm.player.MoveSpeed) * Time.deltaTime;
             return this;
         }
     }
 
     private class AttackingState : MovingState
     {
-        public AttackingState(PlayerStateManager psm) : base(psm) { }
+        public AttackingState(PlayerStateManager psm) : base(psm) 
+        {
+            psm.player.Anim?.SetTrigger("isAttack");
+        }
         public override PlayerState OnInput(InputAction.CallbackContext ctx)
         {
             //auto transition

@@ -14,6 +14,7 @@ public class EnemySpawner : MonoBehaviour
     private float maxEnemies = Mathf.Infinity;
     private float enemiesSpawned = 0;
 
+    //check if all enemies were destroyed
     public bool Exhausted => enemiesSpawned >= maxEnemies;
 
     [SerializeField]
