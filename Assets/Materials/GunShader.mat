@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: GunShader
-  m_Shader: {fileID: -6465566751694194690, guid: 8dff91960f159ef4f82202ee4104a5ba, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: a0bd11a9fd2075d4fa480645801459ca, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
@@ -20,6 +20,10 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_48882336:
+        m_Texture: {fileID: 2800000, guid: a06a5b660e7bf614093fb5c92611652f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_67b37d6b92984f5db34c457a7da43ee9:
         m_Texture: {fileID: 2800000, guid: a06a5b660e7bf614093fb5c92611652f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -80,7 +84,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_08530a86112d4f8fbf46b5fdf0c005b4: 431.95
     - Vector1_6DC2C68C: 0.2
+    - Vector1_a99422c42023474f8e05832586afaa90: -6.6
+    - Vector1_aded22a5bcc641b8a0711d5d6af7e926: 0.1
+    - Vector1_b7600d9e95104447880bff6bf7aa490f: 0.3
+    - Vector1_b7600d9e95104447880bff6bf7aa490f_1: 0.1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -111,8 +120,13 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_19C6C157: {r: 1, g: 0.72604626, b: 0, a: 0}
+    - Color_3d044386da2747f0a12f944bc931661f: {r: 1, g: 0.20669481, b: 0, a: 0}
+    - Color_6b47ad1ec5f54c078aefb2d63f002f19: {r: 21.361254, g: 7.455497, b: 0, a: 0}
     - Color_E448CF9F: {r: 53.132072, g: 0.44696385, b: 0, a: 0}
+    - Color_d13b29e1901748828d4516e66c20ee0f: {r: 0, g: 13.73822, b: 16, a: 0}
+    - Color_d13b29e1901748828d4516e66c20ee0f_1: {r: 54.28272, g: 0, b: 128, a: 0}
     - Vector2_6925FF1E: {r: 6.46, g: 16, b: 0.98, a: 0}
+    - Vector2_743cd388aa3c4ac3a9a2e217a6753634: {r: 1, g: 10, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.9811321, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0.2735849, g: 0, b: 0, a: 1}
