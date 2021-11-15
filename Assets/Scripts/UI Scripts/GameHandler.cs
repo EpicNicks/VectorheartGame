@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameHandler : MonoBehaviour {
 
-    [SerializeField] private HealthBar healthBar;
+    //[SerializeField] private HealthBar healthBar;
+    [SerializeField] private NewHealthBar healthBar;
     [SerializeField] private PlayerHP playerHP;
     private int fullHP;
     private float currentHPPercent;
@@ -13,6 +14,7 @@ public class GameHandler : MonoBehaviour {
     {
         fullHP = playerHP.HP;
         playerHP.OnPlayerHPChanged += PlayerHP_OnPlayerHPChanged;
+        //healthBar.SetSize(50f);
     }
 
     private void PlayerHP_OnPlayerHPChanged(int newHP)
@@ -20,6 +22,4 @@ public class GameHandler : MonoBehaviour {
         currentHPPercent = (float)newHP / fullHP;
         healthBar.SetSize(currentHPPercent);
     }
-
-
 }

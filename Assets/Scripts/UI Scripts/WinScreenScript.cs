@@ -7,24 +7,24 @@ public class WinScreenScript : MonoBehaviour
 {
     public GameObject WinScreen;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            if(WinScreen.activeSelf == true)
-            {
-                WinScreen.SetActive(false);
-                Time.timeScale = 1f;
-                //Cursor.visible = false;
-            }
-            else
-            {
-                WinScreen.SetActive(true);
-                //Cursor.visible = true;
-                Time.timeScale = 0f;
-            }
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Tab))
+    //    {
+    //        if(WinScreen.activeSelf == true)
+    //        {
+    //            WinScreen.SetActive(false);
+    //            Time.timeScale = 1f;
+    //            //Cursor.visible = false;
+    //        }
+    //        else
+    //        {
+    //            WinScreen.SetActive(true);
+    //            //Cursor.visible = true;
+    //            Time.timeScale = 0f;
+    //        }
+    //    }
+    //}
 
 
     public void GoBackToMainMenu()
