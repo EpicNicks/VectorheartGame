@@ -166,10 +166,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 6
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 28
+  spawnDelaySeconds: 0.6
+  maxEnemies: 7
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &75814673
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,10 +220,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 5
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 43
+  spawnDelaySeconds: 0.4
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &84109116
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,10 +328,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 7
-  spawnDelaySeconds: 1
-  maxEnemies: 9
-  enemyPrefabs: []
+  waveId: 43
+  spawnDelaySeconds: 0.4
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &159472183
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,10 +381,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 8
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 21
+  spawnDelaySeconds: 0.7
+  maxEnemies: 8
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &162135942
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,10 +436,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 3
-  spawnDelaySeconds: 1
-  maxEnemies: 7
-  enemyPrefabs: []
+  waveId: 35
+  spawnDelaySeconds: 0.5
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &166785947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,10 +1115,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 8
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 48
+  spawnDelaySeconds: 0.05
+  maxEnemies: 40
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &202342964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,10 +1202,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 7
-  spawnDelaySeconds: 1
-  maxEnemies: 9
-  enemyPrefabs: []
+  waveId: 47
+  spawnDelaySeconds: 0.2
+  maxEnemies: 5
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &223699243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,10 +1254,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 8
-  spawnDelaySeconds: 1
+  waveId: 29
+  spawnDelaySeconds: 0.8
   maxEnemies: 10
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &229538296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,10 +1311,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 4
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 43
+  spawnDelaySeconds: 0.4
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &236520159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,9 +1475,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveId: 13
-  spawnDelaySeconds: 1
+  spawnDelaySeconds: 0.7
   maxEnemies: 12
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &326065830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,10 +1533,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 9
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 22
+  spawnDelaySeconds: 0.7
+  maxEnemies: 8
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!43 &399247109
 Mesh:
   m_ObjectHideFlags: 0
@@ -1638,10 +1752,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 6
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 20
+  spawnDelaySeconds: 0.5
+  maxEnemies: 10
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &438465208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2082,10 +2206,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 3
-  spawnDelaySeconds: 1
-  maxEnemies: 7
-  enemyPrefabs: []
+  waveId: 31
+  spawnDelaySeconds: 0.5
+  maxEnemies: 18
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &532388768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2129,10 +2271,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 8
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 47
+  spawnDelaySeconds: 0.2
+  maxEnemies: 5
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &536546100
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,10 +2323,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 10
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 22
+  spawnDelaySeconds: 0.7
+  maxEnemies: 8
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &562630401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,10 +2378,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 0
-  spawnDelaySeconds: 1
-  maxEnemies: 5
-  enemyPrefabs: []
+  waveId: 26
+  spawnDelaySeconds: 0.6
+  maxEnemies: 12
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &563846726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,7 +2440,14 @@ MonoBehaviour:
   waveId: 15
   spawnDelaySeconds: 1
   maxEnemies: 7
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &568865880
 GameObject:
   m_ObjectHideFlags: 0
@@ -2317,10 +2491,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 0
-  spawnDelaySeconds: 1
-  maxEnemies: 5
-  enemyPrefabs: []
+  waveId: 49
+  spawnDelaySeconds: 0.1
+  maxEnemies: 11
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!43 &578669860
 Mesh:
   m_ObjectHideFlags: 0
@@ -2528,10 +2713,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 6
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 36
+  spawnDelaySeconds: 0.3
+  maxEnemies: 27
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &619749406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,10 +2844,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 6
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 33
+  spawnDelaySeconds: 0.7
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &688046548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2679,10 +2897,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 7
+  waveId: 24
   spawnDelaySeconds: 1
-  maxEnemies: 9
-  enemyPrefabs: []
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &709867959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,10 +2950,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 7
-  spawnDelaySeconds: 1
-  maxEnemies: 9
-  enemyPrefabs: []
+  waveId: 46
+  spawnDelaySeconds: 0.1
+  maxEnemies: 35
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &716855831
 GameObject:
   m_ObjectHideFlags: 0
@@ -3144,10 +3403,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 8
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 44
+  spawnDelaySeconds: 0.5
+  maxEnemies: 18
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &806989917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1852576806548013000, guid: 439c899e6c9663c4a81642602dafdd89, type: 3}
@@ -3196,10 +3473,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 6
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 45
+  spawnDelaySeconds: 0.2
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &825508788
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,10 +3526,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 4
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 38
+  spawnDelaySeconds: 0.3
+  maxEnemies: 15
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &838256637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3290,10 +3588,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 7
-  spawnDelaySeconds: 1
-  maxEnemies: 9
-  enemyPrefabs: []
+  waveId: 29
+  spawnDelaySeconds: 0.8
+  maxEnemies: 10
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &839086667
 GameObject:
   m_ObjectHideFlags: 0
@@ -3817,7 +4125,14 @@ MonoBehaviour:
   waveId: 15
   spawnDelaySeconds: 1
   maxEnemies: 7
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &860992842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3918,10 +4233,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 5
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 33
+  spawnDelaySeconds: 0.7
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &874056199
 GameObject:
   m_ObjectHideFlags: 0
@@ -3965,10 +4286,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 5
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 35
+  spawnDelaySeconds: 0.5
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &921950362
 GameObject:
   m_ObjectHideFlags: 0
@@ -4012,10 +4339,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 6
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 43
+  spawnDelaySeconds: 0.4
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &925708746
 GameObject:
   m_ObjectHideFlags: 0
@@ -4059,10 +4392,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 1
-  spawnDelaySeconds: 1
-  maxEnemies: 5
+  waveId: 45
+  spawnDelaySeconds: 0.2
+  maxEnemies: 6
   enemyPrefabs:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -4163,10 +4497,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 7
-  spawnDelaySeconds: 1
-  maxEnemies: 9
-  enemyPrefabs: []
+  waveId: 40
+  spawnDelaySeconds: 0.3
+  maxEnemies: 15
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &979460438
 GameObject:
   m_ObjectHideFlags: 0
@@ -4523,10 +4872,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 4
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 45
+  spawnDelaySeconds: 0.2
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &994479948
 GameObject:
   m_ObjectHideFlags: 0
@@ -4570,10 +4925,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 0
-  spawnDelaySeconds: 1
-  maxEnemies: 5
-  enemyPrefabs: []
+  waveId: 34
+  spawnDelaySeconds: 0.3
+  maxEnemies: 10
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &1008318484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4799,10 +5164,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 2
-  spawnDelaySeconds: 1
-  maxEnemies: 7
-  enemyPrefabs: []
+  waveId: 35
+  spawnDelaySeconds: 0.5
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1050985805
 GameObject:
   m_ObjectHideFlags: 0
@@ -4846,10 +5217,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 2
-  spawnDelaySeconds: 1
-  maxEnemies: 7
-  enemyPrefabs: []
+  waveId: 45
+  spawnDelaySeconds: 0.2
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1054981976
 GameObject:
   m_ObjectHideFlags: 0
@@ -4893,10 +5270,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 4
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 28
+  spawnDelaySeconds: 0.6
+  maxEnemies: 7
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1069958185
 GameObject:
   m_ObjectHideFlags: 0
@@ -5129,10 +5513,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 10
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 41
+  spawnDelaySeconds: 0.3
+  maxEnemies: 11
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1073165777
 GameObject:
   m_ObjectHideFlags: 0
@@ -5176,10 +5571,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 8
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 37
+  spawnDelaySeconds: 0.4
+  maxEnemies: 5
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1075473173
 GameObject:
   m_ObjectHideFlags: 0
@@ -5268,10 +5668,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 6
-  spawnDelaySeconds: 1
+  waveId: 39
+  spawnDelaySeconds: 0.3
   maxEnemies: 8
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!43 &1091433524
 Mesh:
   m_ObjectHideFlags: 0
@@ -5479,10 +5887,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 3
-  spawnDelaySeconds: 1
-  maxEnemies: 7
-  enemyPrefabs: []
+  waveId: 45
+  spawnDelaySeconds: 0.2
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1156549493
 GameObject:
   m_ObjectHideFlags: 0
@@ -5529,7 +5943,14 @@ MonoBehaviour:
   waveId: 16
   spawnDelaySeconds: 1
   maxEnemies: 7
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1188405127
 GameObject:
   m_ObjectHideFlags: 0
@@ -5576,7 +5997,14 @@ MonoBehaviour:
   waveId: 17
   spawnDelaySeconds: 1
   maxEnemies: 7
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1208479230
 GameObject:
   m_ObjectHideFlags: 0
@@ -5620,10 +6048,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 5
+  waveId: 24
   spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1243895033
 GameObject:
   m_ObjectHideFlags: 0
@@ -5667,10 +6101,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 6
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 47
+  spawnDelaySeconds: 0.2
+  maxEnemies: 5
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1266537436
 GameObject:
   m_ObjectHideFlags: 0
@@ -5717,7 +6156,14 @@ MonoBehaviour:
   waveId: 17
   spawnDelaySeconds: 1
   maxEnemies: 7
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1273092996
 GameObject:
   m_ObjectHideFlags: 0
@@ -5761,10 +6207,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 5
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 28
+  spawnDelaySeconds: 0.6
+  maxEnemies: 7
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1295508076
 GameObject:
   m_ObjectHideFlags: 0
@@ -5977,10 +6430,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 4
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 35
+  spawnDelaySeconds: 0.5
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1306378327
 GameObject:
   m_ObjectHideFlags: 0
@@ -6024,10 +6483,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 1
-  spawnDelaySeconds: 1
-  maxEnemies: 5
+  waveId: 49
+  spawnDelaySeconds: 0.1
+  maxEnemies: 11
   enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -6076,10 +6541,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 3
-  spawnDelaySeconds: 1
-  maxEnemies: 7
-  enemyPrefabs: []
+  waveId: 27
+  spawnDelaySeconds: 0.6
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1340598599
 GameObject:
   m_ObjectHideFlags: 0
@@ -6124,9 +6595,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveId: 14
-  spawnDelaySeconds: 1
+  spawnDelaySeconds: 0.7
   maxEnemies: 12
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1352840335
 GameObject:
   m_ObjectHideFlags: 0
@@ -6483,10 +6966,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 10
-  spawnDelaySeconds: 1
+  waveId: 30
+  spawnDelaySeconds: 0.5
   maxEnemies: 10
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1368480018
 GameObject:
   m_ObjectHideFlags: 0
@@ -6530,10 +7023,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 1
-  spawnDelaySeconds: 1
-  maxEnemies: 5
+  waveId: 27
+  spawnDelaySeconds: 0.6
+  maxEnemies: 6
   enemyPrefabs:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -6582,10 +7076,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 2
-  spawnDelaySeconds: 1
-  maxEnemies: 7
-  enemyPrefabs: []
+  waveId: 27
+  spawnDelaySeconds: 0.6
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1388483502
 GameObject:
   m_ObjectHideFlags: 0
@@ -6910,7 +7410,7 @@ GameObject:
   - component: {fileID: 1402417831}
   - component: {fileID: 1402417832}
   m_Layer: 0
-  m_Name: Spawner (50)
+  m_Name: Spawner (49)
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -6942,10 +7442,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 2
-  spawnDelaySeconds: 1
-  maxEnemies: 7
-  enemyPrefabs: []
+  waveId: 49
+  spawnDelaySeconds: 0.1
+  maxEnemies: 11
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1407095144
 GameObject:
   m_ObjectHideFlags: 0
@@ -6989,10 +7500,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 8
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 25
+  spawnDelaySeconds: 0.6
+  maxEnemies: 12
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1455756978
 GameObject:
   m_ObjectHideFlags: 0
@@ -7036,10 +7559,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 5
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 45
+  spawnDelaySeconds: 0.2
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1467335967
 GameObject:
   m_ObjectHideFlags: 0
@@ -7193,10 +7722,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 3
-  spawnDelaySeconds: 1
-  maxEnemies: 7
-  enemyPrefabs: []
+  waveId: 47
+  spawnDelaySeconds: 0.2
+  maxEnemies: 5
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1496228148
 GameObject:
   m_ObjectHideFlags: 0
@@ -7240,10 +7774,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 4
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 47
+  spawnDelaySeconds: 0.2
+  maxEnemies: 5
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!43 &1531934959
 Mesh:
   m_ObjectHideFlags: 0
@@ -7451,10 +7990,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 3
-  spawnDelaySeconds: 1
-  maxEnemies: 7
-  enemyPrefabs: []
+  waveId: 23
+  spawnDelaySeconds: 0.7
+  maxEnemies: 8
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1602889314
 GameObject:
   m_ObjectHideFlags: 0
@@ -7498,10 +8045,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 0
-  spawnDelaySeconds: 1
-  maxEnemies: 5
-  enemyPrefabs: []
+  waveId: 44
+  spawnDelaySeconds: 0.5
+  maxEnemies: 18
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1634923054
 GameObject:
   m_ObjectHideFlags: 0
@@ -7545,10 +8110,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 8
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 33
+  spawnDelaySeconds: 0.7
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1635085950
 GameObject:
   m_ObjectHideFlags: 0
@@ -7813,10 +8384,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 7
-  spawnDelaySeconds: 1
-  maxEnemies: 9
-  enemyPrefabs: []
+  waveId: 39
+  spawnDelaySeconds: 0.3
+  maxEnemies: 8
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1683523306
 GameObject:
   m_ObjectHideFlags: 0
@@ -7861,9 +8440,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveId: 12
-  spawnDelaySeconds: 1
+  spawnDelaySeconds: 0.7
   maxEnemies: 12
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1692605260
 GameObject:
   m_ObjectHideFlags: 0
@@ -7907,10 +8498,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 10
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 37
+  spawnDelaySeconds: 0.4
+  maxEnemies: 5
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1723974019
 GameObject:
   m_ObjectHideFlags: 0
@@ -7954,10 +8550,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 6
+  waveId: 24
   spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1757363172
 GameObject:
   m_ObjectHideFlags: 0
@@ -8001,10 +8603,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 10
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 47
+  spawnDelaySeconds: 0.2
+  maxEnemies: 5
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &1757718356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8105,10 +8712,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 4
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 32
+  spawnDelaySeconds: 0.5
+  maxEnemies: 18
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1765843348
 GameObject:
   m_ObjectHideFlags: 0
@@ -8161,6 +8786,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1767024462
 GameObject:
   m_ObjectHideFlags: 0
@@ -8204,10 +8831,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 1
-  spawnDelaySeconds: 1
-  maxEnemies: 5
+  waveId: 34
+  spawnDelaySeconds: 0.3
+  maxEnemies: 10
   enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -8256,10 +8888,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 5
-  spawnDelaySeconds: 1
+  waveId: 39
+  spawnDelaySeconds: 0.3
   maxEnemies: 8
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1781550906
 GameObject:
   m_ObjectHideFlags: 0
@@ -8303,10 +8943,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 9
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 47
+  spawnDelaySeconds: 0.2
+  maxEnemies: 5
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1822430490
 GameObject:
   m_ObjectHideFlags: 0
@@ -8350,10 +8995,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 3
-  spawnDelaySeconds: 1
-  maxEnemies: 7
-  enemyPrefabs: []
+  waveId: 38
+  spawnDelaySeconds: 0.3
+  maxEnemies: 15
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1853197282
 GameObject:
   m_ObjectHideFlags: 0
@@ -8397,10 +9057,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 2
-  spawnDelaySeconds: 1
-  maxEnemies: 7
-  enemyPrefabs: []
+  waveId: 49
+  spawnDelaySeconds: 0.1
+  maxEnemies: 11
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1853387839
 GameObject:
   m_ObjectHideFlags: 0
@@ -8444,10 +9115,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 9
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 41
+  spawnDelaySeconds: 0.3
+  maxEnemies: 11
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1860460103
 GameObject:
   m_ObjectHideFlags: 0
@@ -8491,10 +9173,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 8
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 41
+  spawnDelaySeconds: 0.3
+  maxEnemies: 11
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1860692231
 GameObject:
   m_ObjectHideFlags: 0
@@ -8538,10 +9231,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 5
-  spawnDelaySeconds: 1
+  waveId: 9
+  spawnDelaySeconds: 0.5
   maxEnemies: 8
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1861617457
 GameObject:
   m_ObjectHideFlags: 0
@@ -8585,10 +9286,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 3
-  spawnDelaySeconds: 1
-  maxEnemies: 7
-  enemyPrefabs: []
+  waveId: 42
+  spawnDelaySeconds: 0.2
+  maxEnemies: 30
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1881615455
 GameObject:
   m_ObjectHideFlags: 0
@@ -8632,10 +9363,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 4
-  spawnDelaySeconds: 1
+  waveId: 18
+  spawnDelaySeconds: 0.5
   maxEnemies: 8
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1886589350
 GameObject:
   m_ObjectHideFlags: 0
@@ -9299,10 +10038,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 6
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 40
+  spawnDelaySeconds: 0.3
+  maxEnemies: 15
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1933120148
 GameObject:
   m_ObjectHideFlags: 0
@@ -9707,10 +10461,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 7
-  spawnDelaySeconds: 1
-  maxEnemies: 9
-  enemyPrefabs: []
+  waveId: 37
+  spawnDelaySeconds: 0.4
+  maxEnemies: 5
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &2001880488
 GameObject:
   m_ObjectHideFlags: 0
@@ -9754,10 +10513,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 7
-  spawnDelaySeconds: 1
-  maxEnemies: 9
-  enemyPrefabs: []
+  waveId: 21
+  spawnDelaySeconds: 0.7
+  maxEnemies: 8
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &2042919516
 GameObject:
   m_ObjectHideFlags: 0
@@ -9853,10 +10620,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 9
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 37
+  spawnDelaySeconds: 0.4
+  maxEnemies: 5
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &2065863797
 GameObject:
   m_ObjectHideFlags: 0
@@ -9900,10 +10672,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 4
-  spawnDelaySeconds: 1
+  waveId: 23
+  spawnDelaySeconds: 0.7
   maxEnemies: 8
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!43 &2083174108
 Mesh:
   m_ObjectHideFlags: 0
@@ -10111,10 +10891,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 7
-  spawnDelaySeconds: 1
-  maxEnemies: 9
-  enemyPrefabs: []
+  waveId: 33
+  spawnDelaySeconds: 0.7
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &2099730534
 GameObject:
   m_ObjectHideFlags: 0
@@ -10158,10 +10944,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 8
-  spawnDelaySeconds: 1
-  maxEnemies: 10
-  enemyPrefabs: []
+  waveId: 39
+  spawnDelaySeconds: 0.3
+  maxEnemies: 8
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &2119159508
 GameObject:
   m_ObjectHideFlags: 0
@@ -10205,10 +10999,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 9
-  spawnDelaySeconds: 1
+  waveId: 30
+  spawnDelaySeconds: 0.5
   maxEnemies: 10
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &2132974735
 GameObject:
   m_ObjectHideFlags: 0
@@ -10252,10 +11056,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6870b707252b334f99c22fb60197a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveId: 5
-  spawnDelaySeconds: 1
-  maxEnemies: 8
-  enemyPrefabs: []
+  waveId: 47
+  spawnDelaySeconds: 0.2
+  maxEnemies: 5
+  enemyPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &47949742000457654
 GameObject:
   m_ObjectHideFlags: 0
