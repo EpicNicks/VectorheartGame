@@ -166,7 +166,7 @@ public class PlayerStateManager
             Vector3 frontOfPlayer = psm.player.transform.position + psm.player.transform.forward * psm.player.AttackRadius;
             if (psm.player.AttackVfx)
             {
-                Object.Instantiate(psm.player.AttackVfx, psm.player.transform.position + psm.player.transform.forward, Quaternion.identity);
+                Object.Instantiate(psm.player.AttackVfx, psm.player.transform.position + psm.player.transform.forward, Quaternion.identity, psm.player.transform);
             }
             foreach (RaycastHit2D hit in Physics2D.CircleCastAll(frontOfPlayer, psm.player.AttackRadius, Vector2.up))
             {

@@ -91,6 +91,7 @@ public class MeleeEnemy : MonoBehaviour
                     }
                 }
             }
+            Instantiate(attackVfx, transform.position, transform.rotation, transform);
         }
         curAttackCooldownSeconds += Time.deltaTime;
     }
