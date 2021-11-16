@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 8315671138283332262}
   m_Layer: 0
   m_Name: MeleeEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -963,7 +963,7 @@ MonoBehaviour:
   AttackAngleDegrees: 0
   AttackDamage: 0
   AttackRadius: 0
-  moveSpeed: 1
+  moveSpeed: 5
   attackFromDist: 1
   attackCooldownSeconds: 2
 --- !u!1001 &8298388085797342611
