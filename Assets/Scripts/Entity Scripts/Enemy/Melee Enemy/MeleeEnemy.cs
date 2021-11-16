@@ -77,7 +77,6 @@ public class MeleeEnemy : MonoBehaviour
         {
             //Make a cone slash
             animator.SetTrigger("Attack");
-            Instantiate(attackVfx, transform.position, transform.rotation);
             curAttackCooldownSeconds = 0.0f;
             Vector3 frontOfPlayer = transform.position + transform.up * AttackRadius;
             foreach (RaycastHit2D hit in Physics2D.CircleCastAll(frontOfPlayer, AttackRadius, Vector2.up))
