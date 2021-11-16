@@ -86,7 +86,7 @@ Material:
     - _OcclusionStrength: 1
     - _OffSetFactor: 0
     - _OffSetUnits: 0
-    - _OffsetAmount: 0
+    - _OffsetAmount: 0.31308326
     - _OffsetColor: 0
     - _Parallax: 0.02
     - _ScrollSpeed: 0

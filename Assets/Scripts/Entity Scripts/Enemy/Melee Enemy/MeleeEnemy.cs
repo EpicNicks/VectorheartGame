@@ -6,7 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyHP))]
 public class MeleeEnemy : MonoBehaviour
 {
-
     private EnemyHP hp;
     private GameObject player;
 
@@ -46,8 +45,11 @@ public class MeleeEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveToPlayer();
-        Attack();
+        if (!animator.GetBool("isDead"))
+        {
+            MoveToPlayer();
+            Attack();
+        }
     }
     private void MoveToPlayer()
     {
@@ -84,7 +86,6 @@ public class MeleeEnemy : MonoBehaviour
         }
         curAttackCooldownSeconds += Time.deltaTime;
     }
-
 
     public void Die()
     {

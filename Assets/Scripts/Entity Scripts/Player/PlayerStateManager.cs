@@ -55,13 +55,22 @@ public class PlayerStateManager
     {
         protected PlayerStateManager psm;
 
+        protected static float curDashCooldownSeconds;
+
         public PlayerState(PlayerStateManager psm)
         {
             this.psm = psm;
         }
         public abstract PlayerState OnInput(InputAction.CallbackContext ctx);
         public abstract PlayerState DoState(InputAction.CallbackContext ctx);
-        public abstract PlayerState OnUpdate();
+        public virtual PlayerState OnUpdate()
+        {
+            if (curDashCooldownSeconds > 0)
+            {
+                curDashCooldownSeconds -= Time.deltaTime;
+            }
+            return this;
+        }
     }
 
     private class IdleState : PlayerState
@@ -88,6 +97,7 @@ public class PlayerStateManager
 
         public override PlayerState OnUpdate()
         {
+            base.OnUpdate();
             if (curIdleTime >= psm.player.IdleSecondsToPlayIdleAnim)
             {
                 curIdleTime = 0.0f;
@@ -113,7 +123,7 @@ public class PlayerStateManager
             {
                 return new AttackingState(psm);
             }
-            if (ctx.action.name.Equals("Dash") && ctx.action.phase == InputActionPhase.Started)
+            if (ctx.action.name.Equals("Dash") && ctx.action.phase == InputActionPhase.Started && curDashCooldownSeconds <= 0)
             {
                 return new DashState(psm);
             }
@@ -132,6 +142,7 @@ public class PlayerStateManager
 
         public override PlayerState OnUpdate()
         {
+            base.OnUpdate();
             psm.player.transform.rotation = Quaternion.LookRotation(new Vector3(psm.move.x, psm.move.y, 0), psm.player.transform.up);
             psm.player.transform.position += psm.player.transform.forward * (psm.isSprinting ? psm.player.SprintSpeed : psm.player.MoveSpeed) * Time.deltaTime;
             return this;
@@ -153,7 +164,10 @@ public class PlayerStateManager
         public override PlayerState DoState(InputAction.CallbackContext ctx)
         {
             Vector3 frontOfPlayer = psm.player.transform.position + psm.player.transform.forward * psm.player.AttackRadius;
-            Object.Instantiate(psm.player.AttackVfx, psm.player.transform.position, Quaternion.identity);
+            if (psm.player.AttackVfx)
+            {
+                Object.Instantiate(psm.player.AttackVfx, psm.player.transform.position, Quaternion.identity);
+            }
             foreach (RaycastHit2D hit in Physics2D.CircleCastAll(frontOfPlayer, psm.player.AttackRadius, Vector2.up))
             {
                 float hitAngle = Vector2.Angle(psm.player.transform.position, hit.point);
@@ -180,7 +194,10 @@ public class PlayerStateManager
         private bool hasStartedDash = false;
         private bool hasCompletedDash = false;
         
-        public DashState(PlayerStateManager psm) : base(psm) { }
+        public DashState(PlayerStateManager psm) : base(psm)
+        {
+            curDashCooldownSeconds = psm.player.DashAttackCooldownSeconds;
+        }
         public override PlayerState OnInput(InputAction.CallbackContext ctx)
         {
             // this state auto-transitions
@@ -210,15 +227,11 @@ public class PlayerStateManager
             
             while (elapsed < psm.player.DashSeconds)
             {
-                if (Physics2D.Raycast(psm.player.transform.position, psm.player.transform.forward, 0.05f))
-                {
-                    psm.player.transform.position = Vector2.Lerp(initialPos, destination, elapsed / psm.player.DashSeconds);
-                }
+                psm.player.transform.position = Vector2.Lerp(initialPos, destination, elapsed / psm.player.DashSeconds);
                 elapsed += Time.deltaTime;
                 yield return null;
             }
 
-            psm.player.transform.position = destination;
             if (psm.player.DashAttackHitbox)
             {
                 psm.player.DashAttackHitbox.enabled = false;

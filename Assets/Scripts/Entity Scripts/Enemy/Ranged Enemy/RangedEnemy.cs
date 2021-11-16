@@ -43,8 +43,11 @@ public class RangedEnemy : MonoBehaviour
 
     private void Update()
     {
-        MoveToPlayer();
-        Attack();
+        if (!animator.GetBool("isDead")) 
+        {
+            MoveToPlayer();
+            Attack();
+        }
     }
 
     private void MoveToPlayer()
@@ -61,7 +64,8 @@ public class RangedEnemy : MonoBehaviour
     {
         if (curAttackCooldownSeconds >= attackCooldownSeconds)
         {
-            Instantiate(projectile, transform.position, transform.rotation);
+            GameObject proj = Instantiate(projectile, transform.position, transform.rotation);
+            proj.transform.up = transform.forward;
             animator.SetTrigger("isShooting");
             animator.SetBool("isRunning", false);
             curAttackCooldownSeconds = 0.0f;

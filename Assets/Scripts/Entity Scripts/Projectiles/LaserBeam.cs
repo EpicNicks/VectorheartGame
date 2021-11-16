@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
 public class LaserBeam : MonoBehaviour
 {
-
-    private Collider2D col;
 
     [System.Flags]
     enum CanHurt
@@ -15,6 +12,9 @@ public class LaserBeam : MonoBehaviour
         ENEMY = 2
     }
 
+    [SerializeField]
+    private float colRadius;
+    
     [SerializeField]
     private LayerMask collisionMask;
 
@@ -29,36 +29,37 @@ public class LaserBeam : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnDrawGizmos()
     {
-        if (collision.CompareTag("Player"))
-        {
-            if (canHurt.HasFlag(CanHurt.PLAYER))
-            {
-                PlayerHP hp = collision.gameObject.GetComponent<PlayerHP>();
-                hp.HP -= damage;
-            }
-        }
-        else if (collision.CompareTag("Enemy"))
-        {
-            if (canHurt.HasFlag(CanHurt.ENEMY))
-            {
-                EnemyHP hp = collision.gameObject.GetComponent<EnemyHP>();
-                hp.HP -= damage;
-            }
-        }
-        else
-        {
-            curBounces++;
-        }
+        Gizmos.DrawLine(transform.position, transform.position + transform.up * 3.0f);
+        Gizmos.DrawWireSphere(transform.position, colRadius);
     }
 
     private void CheckBounce()
     {
         Ray2D ray = new Ray2D(transform.position, transform.up);
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Time.deltaTime * speed + col.bounds.size.y, collisionMask);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Time.deltaTime * speed + colRadius, collisionMask);
         if (hit.collider != null)
         {
+            if (hit.collider.CompareTag("Player"))
+            {
+                if (canHurt.HasFlag(CanHurt.PLAYER))
+                {
+                    Debug.Log("hit player");
+                    PlayerHP hp = hit.collider.GetComponent<PlayerHP>();
+                    hp.HP -= damage;
+                    Destroy(gameObject);
+                }
+            }
+            else if (hit.collider.CompareTag("Enemy"))
+            {
+                if (canHurt.HasFlag(CanHurt.ENEMY))
+                {
+                    EnemyHP hp = hit.collider.GetComponent<EnemyHP>();
+                    hp.HP -= damage;
+                    Destroy(gameObject);
+                }
+            }
             if (curBounces < numDeflectionBounces)
             {
                 Vector2 reflectDir = Vector2.Reflect(ray.direction, hit.normal);
@@ -71,16 +72,6 @@ public class LaserBeam : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-    }
-
-    private void Awake()
-    {
-        col = GetComponent<Collider2D>();
-        col.isTrigger = true;
-    }
-
-    private void Start()
-    {
     }
 
     void Update()

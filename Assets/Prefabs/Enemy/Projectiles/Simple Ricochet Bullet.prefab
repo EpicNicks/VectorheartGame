@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2062294832675785104}
   - component: {fileID: 2062294832675785105}
-  - component: {fileID: 2062294832675785326}
-  - component: {fileID: 2062294832675785324}
   - component: {fileID: 2841930916393293364}
+  - component: {fileID: 8279657927239293769}
   m_Layer: 0
   m_Name: Simple Ricochet Bullet
   m_TagString: Untagged
@@ -86,41 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &2062294832675785326
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2062294832675785325}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &2062294832675785324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2062294832675785325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2fe43ee14036ab418b26ca4d799335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 64
-  canHurt: 0
-  numDeflectionBounces: 10
-  damage: 0
-  speed: 20
 --- !u!96 &2841930916393293364
 TrailRenderer:
   serializedVersion: 2
@@ -228,6 +192,26 @@ TrailRenderer:
   m_MinVertexDistance: 5
   m_Autodestruct: 1
   m_Emitting: 1
+--- !u!114 &8279657927239293769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062294832675785325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2fe43ee14036ab418b26ca4d799335c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colRadius: 0.5
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 64
+  canHurt: 1
+  numDeflectionBounces: 10
+  damage: 10
+  speed: 20
 --- !u!1 &8889737241305069598
 GameObject:
   m_ObjectHideFlags: 0

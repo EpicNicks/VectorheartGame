@@ -41,6 +41,10 @@ public class CharacterInput : MonoBehaviour
     [SerializeField]
     private float dashSeconds = 0.2f;
     public float DashSeconds => dashSeconds;
+
+    [SerializeField]
+    private float dashAttackCooldownSeconds;
+    public float DashAttackCooldownSeconds => dashAttackCooldownSeconds;
     [SerializeField]
     private Collider dashAttackHitbox;
     public Collider DashAttackHitbox => dashAttackHitbox;
@@ -57,9 +61,10 @@ public class CharacterInput : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        Gizmos.DrawRay(transform.position, transform.forward * 5);
         Gizmos.DrawWireSphere(transform.position + transform.forward * attackRadius, attackRadius);
-        Gizmos.DrawLine(transform.position, transform.position + Quaternion.Euler(0, 0, attackAngleDegrees) * transform.up * attackRadius * 2);
-        Gizmos.DrawLine(transform.position, transform.position + Quaternion.Euler(0, 0, -attackAngleDegrees) * transform.up * attackRadius * 2);
+        Gizmos.DrawLine(transform.position, transform.position + Quaternion.Euler(0, 0, attackAngleDegrees) * transform.forward * attackRadius * 2);
+        Gizmos.DrawLine(transform.position, transform.position + Quaternion.Euler(0, 0, -attackAngleDegrees) * transform.forward * attackRadius * 2);
     }
 
     private void Awake()
