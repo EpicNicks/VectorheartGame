@@ -1007,15 +1007,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 8319497031202885163}
-  moveSpeed: 1
-  sprintSpeed: 3
+  moveSpeed: 15
+  sprintSpeed: 15
   idleSecondsToPlayIdleAnim: 3
-  attackRadius: 1
+  attackRadius: 2
   attackAngleDegrees: 45
-  attackDamage: 0
+  attackDamage: 60
   dashDistance: 3
   dashSeconds: 0.2
+  dashAttackCooldownSeconds: 0
   dashAttackHitbox: {fileID: 0}
+  attackVfx: {fileID: 0}
+  dashSfx: {fileID: 0}
 --- !u!1 &8967171415347459493
 GameObject:
   m_ObjectHideFlags: 0
