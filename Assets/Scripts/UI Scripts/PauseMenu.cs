@@ -9,6 +9,11 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject button;
 
+    private void Start()
+    {
+        Cursor.visible = false;
+    }
+
     public void TogglePause()
     {
         if (GameIsPaused)
@@ -38,6 +43,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Restart()
     {
+        Cursor.visible = false;
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
