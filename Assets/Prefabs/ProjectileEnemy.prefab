@@ -615,6 +615,7 @@ GameObject:
   - component: {fileID: 6207118635806531556}
   - component: {fileID: 8878554360515516606}
   - component: {fileID: 1651812825494992516}
+  - component: {fileID: 2535364302732687687}
   m_Layer: 6
   m_Name: ProjectileEnemy
   m_TagString: Enemy
@@ -690,6 +691,27 @@ MonoBehaviour:
   projectile: {fileID: 2062294832675785325, guid: 68842927e72d126448ed077a897288f0, type: 3}
   attackSfx: {fileID: 0}
   col: {fileID: 7166474264117788991}
+--- !u!50 &2535364302732687687
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6549769130862429821}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6983236249050197607
 GameObject:
   m_ObjectHideFlags: 0

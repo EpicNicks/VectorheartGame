@@ -170,6 +170,7 @@ public class PlayerStateManager
             }
             foreach (RaycastHit2D hit in Physics2D.CircleCastAll(frontOfPlayer, psm.player.AttackRadius, Vector2.up))
             {
+                Debug.Log(hit.collider.gameObject);
                 float hitAngle = Vector2.Angle(psm.player.transform.position, hit.point);
                 if (hitAngle > -psm.player.AttackAngleDegrees && hitAngle < psm.player.AttackAngleDegrees)
                 {

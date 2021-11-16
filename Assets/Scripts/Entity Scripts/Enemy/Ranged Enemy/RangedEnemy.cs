@@ -64,7 +64,6 @@ public class RangedEnemy : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position, -Vector3.forward);
         if (Vector2.Distance(transform.position, player.transform.position) >= attackFromDist)
         {
-            Debug.Log(Vector2.Distance(transform.position, player.transform.position));
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
             animator.SetBool("isRunning", true);
         }

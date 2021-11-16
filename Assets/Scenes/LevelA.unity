@@ -4151,6 +4151,32 @@ MonoBehaviour:
   - {fileID: 6549769130862429821, guid: b9590b81e54209b45994e195e751cf89, type: 3}
   - {fileID: 6549769130862429821, guid: b9590b81e54209b45994e195e751cf89, type: 3}
   - {fileID: 6549769130862429821, guid: b9590b81e54209b45994e195e751cf89, type: 3}
+--- !u!1 &862905312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6549769130862429821, guid: b9590b81e54209b45994e195e751cf89, type: 3}
+  m_PrefabInstance: {fileID: 1054295275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &862905313
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862905312}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &872578707
 GameObject:
   m_ObjectHideFlags: 0
