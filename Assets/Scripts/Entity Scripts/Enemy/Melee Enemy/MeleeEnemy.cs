@@ -40,7 +40,7 @@ public class MeleeEnemy : MonoBehaviour
         if (newHP <= 0)
         {
             //do death animation or whatever else
-            Destroy(gameObject);
+            animator.SetBool("isDead", true);
         }
     }
     // Update is called once per frame

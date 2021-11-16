@@ -178,7 +178,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7e9e12bcdd63b2344aeda629e3e75103, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -207,6 +207,8 @@ MonoBehaviour:
   dashDistance: 3
   dashSeconds: 0.2
   dashAttackHitbox: {fileID: 0}
+  attackVfx: {fileID: 0}
+  dashSfx: {fileID: 0}
 --- !u!50 &7594620280707502962
 Rigidbody2D:
   serializedVersion: 4
@@ -1265,11 +1267,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4564666829005352244, guid: 5b96be46bc7f51a40be28c76dd68f408, type: 3}
       propertyPath: m_shaderPropertyID
-      value: 1214
+      value: 733
       objectReference: {fileID: 0}
     - target: {fileID: 4564666829005352244, guid: 5b96be46bc7f51a40be28c76dd68f408, type: 3}
       propertyPath: m_materialData.Array.data[0].m_move
-      value: 0.24361685
+      value: 0.23689617
       objectReference: {fileID: 0}
     - target: {fileID: 4564666829005352244, guid: 5b96be46bc7f51a40be28c76dd68f408, type: 3}
       propertyPath: m_materialData.Array.data[0].m_uvTiling.x

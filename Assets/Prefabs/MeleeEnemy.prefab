@@ -928,7 +928,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 98c7d9c08a106024a95104a55f031d58, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -967,6 +967,7 @@ MonoBehaviour:
   moveSpeed: 5
   attackFromDist: 1
   attackCooldownSeconds: 2
+  attackSfx: {fileID: 0}
 --- !u!1001 &4261380988378506424
 PrefabInstance:
   m_ObjectHideFlags: 0
