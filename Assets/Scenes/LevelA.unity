@@ -8956,8 +8956,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 889065419}
   playerHP: {fileID: 810015559}
-  textMesh: {fileID: 1389956082}
+  countScore: {fileID: 0}
   FailScreen: {fileID: 7580404025454146155}
+  finalScore: {fileID: 0}
 --- !u!4 &1720024827
 Transform:
   m_ObjectHideFlags: 0

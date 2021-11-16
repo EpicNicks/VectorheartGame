@@ -19,10 +19,10 @@ public class AbilitiesUI : MonoBehaviour
     {
         TestTimer += Time.deltaTime;
         TestCoolDown = TestTimer * 33f;
-        mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 96+ TestCoolDown);
+        mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100f+ TestCoolDown);
     }
     public void SetSize(float sizeNormalized)
     {
-        mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 40f + sizeNormalized * 0.6f);
+        mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100f + sizeNormalized);
     }
 }
