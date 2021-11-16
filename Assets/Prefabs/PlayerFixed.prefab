@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 491480196172109511}
   - component: {fileID: 7594620280707502962}
   - component: {fileID: 2705184449408576001}
+  - component: {fileID: 2299790436233566742}
   m_Layer: 0
   m_Name: PlayerFixed
   m_TagString: Player
@@ -243,6 +244,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.75
+--- !u!114 &2299790436233566742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491480196172109508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9412110675687284ba6e224c504a873f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &579940741744044499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,11 +1265,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4564666829005352244, guid: 5b96be46bc7f51a40be28c76dd68f408, type: 3}
       propertyPath: m_shaderPropertyID
-      value: 733
+      value: 1214
       objectReference: {fileID: 0}
     - target: {fileID: 4564666829005352244, guid: 5b96be46bc7f51a40be28c76dd68f408, type: 3}
       propertyPath: m_materialData.Array.data[0].m_move
-      value: 0.23689617
+      value: 0.24361685
       objectReference: {fileID: 0}
     - target: {fileID: 4564666829005352244, guid: 5b96be46bc7f51a40be28c76dd68f408, type: 3}
       propertyPath: m_materialData.Array.data[0].m_uvTiling.x
