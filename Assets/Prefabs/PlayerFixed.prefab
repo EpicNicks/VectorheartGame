@@ -740,7 +740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5989882873368772854
 Transform:
   m_ObjectHideFlags: 0
@@ -1280,11 +1280,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4564666829005352244, guid: 5b96be46bc7f51a40be28c76dd68f408, type: 3}
       propertyPath: m_shaderPropertyID
-      value: 752
+      value: 786
       objectReference: {fileID: 0}
     - target: {fileID: 4564666829005352244, guid: 5b96be46bc7f51a40be28c76dd68f408, type: 3}
       propertyPath: m_materialData.Array.data[0].m_move
-      value: 0.24361685
+      value: 0.23689617
       objectReference: {fileID: 0}
     - target: {fileID: 4564666829005352244, guid: 5b96be46bc7f51a40be28c76dd68f408, type: 3}
       propertyPath: m_materialData.Array.data[0].m_uvTiling.x

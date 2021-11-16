@@ -19,6 +19,7 @@ public class SpawnerMaster : MonoBehaviour
     private void Awake()
     {
         spawners = FindObjectsOfType<EnemySpawner>().ToList();
+        curWave = spawners.Select(s => s.WaveId).Min();
         spawners.ForEach(s => s.enabled = false);
     }
 
@@ -35,6 +36,7 @@ public class SpawnerMaster : MonoBehaviour
                 curWave++;
             }
         }
+        curDelaySeconds += Time.deltaTime;
     }
 
 

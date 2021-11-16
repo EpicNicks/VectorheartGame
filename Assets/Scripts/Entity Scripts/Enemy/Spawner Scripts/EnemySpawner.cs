@@ -15,7 +15,8 @@ public class EnemySpawner : MonoBehaviour
     private float enemiesSpawned = 0;
 
     //check if all enemies were destroyed
-    public bool Exhausted => enemiesSpawned >= maxEnemies;
+    private int deadCount = 0;
+    public bool Exhausted => deadCount >= maxEnemies;
 
     [SerializeField]
     private List<GameObject> enemyPrefabs = new List<GameObject> { };
@@ -55,5 +56,10 @@ public class EnemySpawner : MonoBehaviour
                 Instantiate(enemyPrefabs[(int)enemiesSpawned++ % enemyPrefabs.Count], transform.position, Quaternion.identity, transform);
             }
         }
+    }
+
+    public void Report()
+    {
+        deadCount++;
     }
 }
