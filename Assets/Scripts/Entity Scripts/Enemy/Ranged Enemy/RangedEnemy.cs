@@ -63,6 +63,7 @@ public class RangedEnemy : MonoBehaviour
         {
             Instantiate(projectile, transform.position, transform.rotation);
             animator.SetTrigger("isShooting");
+            animator.SetBool("isRunning", false);
             curAttackCooldownSeconds = 0.0f;
         }
         curAttackCooldownSeconds += Time.deltaTime;
