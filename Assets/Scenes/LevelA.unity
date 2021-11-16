@@ -1345,6 +1345,11 @@ MonoBehaviour:
   - {fileID: 6549769130862429821, guid: b9590b81e54209b45994e195e751cf89, type: 3}
   - {fileID: 6549769130862429821, guid: b9590b81e54209b45994e195e751cf89, type: 3}
   - {fileID: 6549769130862429821, guid: b9590b81e54209b45994e195e751cf89, type: 3}
+--- !u!1 &236367868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4935612605465008257, guid: 4307cc3e660ff8e43aa79e3745326179, type: 3}
+  m_PrefabInstance: {fileID: 1846653277}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &257028114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,6 +1905,11 @@ MonoBehaviour:
   - {fileID: 9216794958067283760, guid: 0627db38cb5784e41b45d4317d51d5f9, type: 3}
   - {fileID: 9216794958067283760, guid: 0627db38cb5784e41b45d4317d51d5f9, type: 3}
   - {fileID: 9216794958067283760, guid: 0627db38cb5784e41b45d4317d51d5f9, type: 3}
+--- !u!1 &435224341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 331654151021456555, guid: 4307cc3e660ff8e43aa79e3745326179, type: 3}
+  m_PrefabInstance: {fileID: 1846653277}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &462257199
 Mesh:
   m_ObjectHideFlags: 0
@@ -8263,6 +8273,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8315671138283332262, guid: 0627db38cb5784e41b45d4317d51d5f9, type: 3}
+      propertyPath: AttackRadius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315671138283332262, guid: 0627db38cb5784e41b45d4317d51d5f9, type: 3}
       propertyPath: attackFromDist
       value: 0.1
       objectReference: {fileID: 0}
@@ -9468,6 +9482,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 33.677402
       objectReference: {fileID: 0}
+    - target: {fileID: 331654151021456555, guid: 4307cc3e660ff8e43aa79e3745326179, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491480196172109508, guid: 4307cc3e660ff8e43aa79e3745326179, type: 3}
       propertyPath: m_Name
       value: PlayerFixed
@@ -9476,6 +9494,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 491480196172109511, guid: 4307cc3e660ff8e43aa79e3745326179, type: 3}
+      propertyPath: dashSfx
+      value: 
+      objectReference: {fileID: 435224341}
+    - target: {fileID: 491480196172109511, guid: 4307cc3e660ff8e43aa79e3745326179, type: 3}
+      propertyPath: attackVfx
+      value: 
+      objectReference: {fileID: 236367868}
     - target: {fileID: 491480196172109511, guid: 4307cc3e660ff8e43aa79e3745326179, type: 3}
       propertyPath: moveSpeed
       value: 7

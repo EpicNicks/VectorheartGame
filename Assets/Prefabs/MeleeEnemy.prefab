@@ -963,9 +963,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8298388085657585971}
-  AttackAngleDegrees: 0
-  AttackDamage: 0
-  AttackRadius: 0
+  AttackAngleDegrees: 45
+  AttackDamage: 20
+  AttackRadius: 2
   moveSpeed: 5
   attackFromDist: 1
   attackCooldownSeconds: 2
