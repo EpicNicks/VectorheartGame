@@ -2240,7 +2240,7 @@ GameObject:
   - component: {fileID: 501136193}
   - component: {fileID: 501136192}
   m_Layer: 5
-  m_Name: Score
+  m_Name: FinalScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7723,7 +7723,7 @@ GameObject:
   - component: {fileID: 1389956083}
   - component: {fileID: 1389956082}
   m_Layer: 5
-  m_Name: Score
+  m_Name: CountScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8956,9 +8956,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 889065419}
   playerHP: {fileID: 810015559}
-  countScore: {fileID: 0}
+  countScore: {fileID: 1389956082}
   FailScreen: {fileID: 7580404025454146155}
-  finalScore: {fileID: 0}
+  finalScore: {fileID: 501136192}
 --- !u!4 &1720024827
 Transform:
   m_ObjectHideFlags: 0
