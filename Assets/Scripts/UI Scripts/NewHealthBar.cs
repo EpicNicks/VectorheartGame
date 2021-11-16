@@ -20,6 +20,6 @@ public class NewHealthBar : MonoBehaviour
 
     public void SetSize(float sizeNormalized)
     {
-        mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 18f+ sizeNormalized * ratio);
+        mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 18f+ sizeNormalized * ratio *100);
     }
 }
