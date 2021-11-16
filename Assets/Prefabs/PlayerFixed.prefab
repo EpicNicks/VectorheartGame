@@ -197,8 +197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 491480196172109510}
-  moveSpeed: 1
-  sprintSpeed: 3
+  moveSpeed: 7
+  sprintSpeed: 9
   idleSecondsToPlayIdleAnim: 3
   attackRadius: 1
   attackAngleDegrees: 45
