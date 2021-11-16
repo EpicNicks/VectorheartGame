@@ -8,11 +8,6 @@ public class AbilitiesUI : MonoBehaviour
     private float TestTimer;
     private float TestCoolDown;
 
-    //Test
-    //void Start()
-    //{
-    //    mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 120);
-    //}
 
 
     private void Update()
@@ -20,6 +15,17 @@ public class AbilitiesUI : MonoBehaviour
         TestTimer += Time.deltaTime;
         TestCoolDown = TestTimer * 33f;
         mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100f+ TestCoolDown);
+
+        //test code
+
+        //if(isCoolDown == true)
+        //{
+        //    mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100f + RemainingCoolDown);
+        //}else
+        //{
+        //    mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100f);
+        //}
+
     }
     public void SetSize(float sizeNormalized)
     {
