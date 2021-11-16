@@ -98,6 +98,7 @@ public class MeleeEnemy : MonoBehaviour
 
     public void Die()
     {
+        FindObjectOfType<GameHandler>().Score += 100;
         Destroy(gameObject);
     }
 }

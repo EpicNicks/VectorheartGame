@@ -87,6 +87,7 @@ public class RangedEnemy : MonoBehaviour
 
     public void Die()
     {
+        FindObjectOfType<GameHandler>().Score += 200;
         Destroy(gameObject);
     }
 }

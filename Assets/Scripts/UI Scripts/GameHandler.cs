@@ -15,20 +15,23 @@ public class GameHandler : MonoBehaviour {
     public GameObject FailScreen;
     public TextMeshProUGUI finalScore;
 
-    public int Score;
+    private int score;
+    public int Score
+    {
+        get => score;
+        set
+        {
+            score = value;
+            countScore.text = value.ToString();
+            finalScore.text = value.ToString();
+        }
+    }
 
     private void Start()
     {
         fullHP = playerHP.HP;
         playerHP.OnPlayerHPChanged += PlayerHP_OnPlayerHPChanged;
-        Score = 0; 
-    }
-    private void Update()
-    {
-        //here should be a function to get current score;
-        //will set text as Current Score
-        countScore.text = Score.ToString();
-        finalScore.text = Score.ToString();
+        Score = 0;
     }
 
     private void PlayerHP_OnPlayerHPChanged(int newHP)
@@ -43,11 +46,4 @@ public class GameHandler : MonoBehaviour {
         }
     }
 
-    public int GetScore() {
-        return Score;
-    }
-    public void SetScore(int newScore)
-    {
-        Score = newScore;
-    }
 }
