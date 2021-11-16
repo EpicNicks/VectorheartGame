@@ -24,7 +24,8 @@ public class MeleeEnemy : MonoBehaviour
     private float attackCooldownSeconds = 2.0f;
     private float curAttackCooldownSeconds = 0.0f;
 
-
+    [SerializeField]
+    private GameObject attackSfx;
 
     // Start is called before the first frame update
     void Start()
@@ -52,10 +53,11 @@ public class MeleeEnemy : MonoBehaviour
     {
         //float rot_z = Mathf.Atan2(player.transform.position.y, player.transform.position.x) * Mathf.Rad2Deg;
         //transform.rotation = Quaternion.Euler(0f, 0f, 90 - rot_z);
-        transform.up = player.transform.position - transform.position;
+        transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position, -Vector3.forward);
+        //transform.forward = player.transform.position - transform.position;
         if (Vector2.Distance(transform.position, player.transform.position) >= attackFromDist)
         {
-            transform.position += transform.up * moveSpeed * Time.deltaTime;
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
     }
 
@@ -81,5 +83,11 @@ public class MeleeEnemy : MonoBehaviour
             }
         }
         curAttackCooldownSeconds += Time.deltaTime;
+    }
+
+
+    public void Die()
+    {
+        Destroy(gameObject);
     }
 }
