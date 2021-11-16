@@ -11,15 +11,17 @@ public class GameHandler : MonoBehaviour {
     [SerializeField] private PlayerHP playerHP;
     private int fullHP;
     private float currentHPPercent;
-    public TextMeshProUGUI textMesh;
-    public GameObject FailScreen; 
+    public TextMeshProUGUI countScore;
+    public GameObject FailScreen;
+    public TextMeshProUGUI finalScore;
 
     private void Start()
     {
         fullHP = playerHP.HP;
         playerHP.OnPlayerHPChanged += PlayerHP_OnPlayerHPChanged;
         //will set text as Current Score
-        textMesh.text = "Score";
+        countScore.text = "Score";
+        finalScore.text = "Score";
         //healthBar.SetSize(.5f);
     }
 
