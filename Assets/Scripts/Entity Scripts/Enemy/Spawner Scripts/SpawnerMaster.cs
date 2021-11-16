@@ -43,11 +43,7 @@ public class SpawnerMaster : MonoBehaviour
 
     private void EnableSpawners()
     {
-        if (!waveStarted)
-        {
-            waveStarted = true;
-            spawners.Where(s => s.WaveId == curWave).ToList().ForEach(s => s.enabled = true);
-        }
+        spawners.Where(s => s.WaveId == curWave).ToList().ForEach(s => s.enabled = true);
     }
     
 }
