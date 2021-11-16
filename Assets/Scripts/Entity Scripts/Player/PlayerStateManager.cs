@@ -152,7 +152,8 @@ public class PlayerStateManager
 
         public override PlayerState DoState(InputAction.CallbackContext ctx)
         {
-            Vector3 frontOfPlayer = psm.player.transform.position + psm.player.transform.up * psm.player.AttackRadius;
+            Vector3 frontOfPlayer = psm.player.transform.position + psm.player.transform.forward * psm.player.AttackRadius;
+            Object.Instantiate(psm.player.AttackVfx, psm.player.transform.position, Quaternion.identity);
             foreach (RaycastHit2D hit in Physics2D.CircleCastAll(frontOfPlayer, psm.player.AttackRadius, Vector2.up))
             {
                 float hitAngle = Vector2.Angle(psm.player.transform.position, hit.point);
@@ -209,7 +210,10 @@ public class PlayerStateManager
             
             while (elapsed < psm.player.DashSeconds)
             {
-                psm.player.transform.position = Vector2.Lerp(initialPos, destination, elapsed / psm.player.DashSeconds);
+                if (Physics2D.Raycast(psm.player.transform.position, psm.player.transform.forward, 0.05f))
+                {
+                    psm.player.transform.position = Vector2.Lerp(initialPos, destination, elapsed / psm.player.DashSeconds);
+                }
                 elapsed += Time.deltaTime;
                 yield return null;
             }

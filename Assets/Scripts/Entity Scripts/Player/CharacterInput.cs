@@ -44,13 +44,20 @@ public class CharacterInput : MonoBehaviour
     [SerializeField]
     private Collider dashAttackHitbox;
     public Collider DashAttackHitbox => dashAttackHitbox;
+
+    [SerializeField]
+    private GameObject attackVfx;
+    public GameObject AttackVfx => attackVfx;
+    [SerializeField]
+    private GameObject dashSfx;
+    public GameObject DashSfx => dashSfx;
     #endregion
 
     private PlayerStateManager psm;
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position + transform.up * attackRadius, attackRadius);
+        Gizmos.DrawWireSphere(transform.position + transform.forward * attackRadius, attackRadius);
         Gizmos.DrawLine(transform.position, transform.position + Quaternion.Euler(0, 0, attackAngleDegrees) * transform.up * attackRadius * 2);
         Gizmos.DrawLine(transform.position, transform.position + Quaternion.Euler(0, 0, -attackAngleDegrees) * transform.up * attackRadius * 2);
     }
