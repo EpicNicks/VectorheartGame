@@ -12,18 +12,25 @@ public class GameHandler : MonoBehaviour {
     private int fullHP;
     private float currentHPPercent;
     public TextMeshProUGUI textMesh;
+    public GameObject FailScreen; 
 
     private void Start()
     {
         fullHP = playerHP.HP;
         playerHP.OnPlayerHPChanged += PlayerHP_OnPlayerHPChanged;
-        //healthBar.SetSize(50f);
-        textMesh.text = "test";
+        //will set text as Current Score
+        textMesh.text = "Current Score";
     }
 
     private void PlayerHP_OnPlayerHPChanged(int newHP)
     {
         currentHPPercent = (float)newHP / fullHP;
         healthBar.SetSize(currentHPPercent);
+
+        if(newHP <= 0)
+        {
+            FailScreen.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 }

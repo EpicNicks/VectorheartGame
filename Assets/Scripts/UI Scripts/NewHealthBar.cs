@@ -5,6 +5,7 @@ using UnityEngine;
 public class NewHealthBar : MonoBehaviour
 {
     public GameObject mask;
+    private float ratio;
 
 
     // Start is called before the first frame update
@@ -12,9 +13,13 @@ public class NewHealthBar : MonoBehaviour
     //{
     //    mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 80);
     //}
+    private void Start()
+    {
+        ratio = 82f / 100f;
+    }
 
     public void SetSize(float sizeNormalized)
     {
-        mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 40f+ sizeNormalized * 0.6f);
+        mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 18f+ sizeNormalized * ratio);
     }
 }
