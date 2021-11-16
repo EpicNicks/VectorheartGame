@@ -84,4 +84,10 @@ public class MeleeEnemy : MonoBehaviour
         }
         curAttackCooldownSeconds += Time.deltaTime;
     }
+
+
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
 }

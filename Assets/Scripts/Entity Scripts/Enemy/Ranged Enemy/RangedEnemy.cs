@@ -63,4 +63,9 @@ public class RangedEnemy : MonoBehaviour
         }
         curAttackCooldownSeconds += Time.deltaTime;
     }
+
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
 }

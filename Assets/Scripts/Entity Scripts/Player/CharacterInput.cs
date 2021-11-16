@@ -82,4 +82,8 @@ public class CharacterInput : MonoBehaviour
         psm.ConsumeInput(ctx);
     }
 
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
 }
