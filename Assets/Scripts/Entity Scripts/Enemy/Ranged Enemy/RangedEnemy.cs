@@ -24,12 +24,20 @@ public class RangedEnemy : MonoBehaviour
     [SerializeField]
     private GameObject attackSfx;
 
+    [SerializeField]
+    private Collider2D col;
+
     private void Awake()
     {
         gameObject.AddComponent<DeathReporter>();
         hp = GetComponent<EnemyHP>();
         player = FindObjectOfType<CharacterInput>().gameObject;
         hp.OnEnemyHPChanged += Hp_OnEnemyHPChanged;
+    }
+
+    private void Start()
+    {
+        col.transform.position = new Vector3(col.transform.position.x, col.transform.position.y, 0);
     }
 
     private void Hp_OnEnemyHPChanged(int newHP)
@@ -56,8 +64,13 @@ public class RangedEnemy : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position, -Vector3.forward);
         if (Vector2.Distance(transform.position, player.transform.position) >= attackFromDist)
         {
+            Debug.Log(Vector2.Distance(transform.position, player.transform.position));
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
             animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
         }
     }
 
@@ -65,10 +78,9 @@ public class RangedEnemy : MonoBehaviour
     {
         if (curAttackCooldownSeconds >= attackCooldownSeconds)
         {
-            GameObject proj = Instantiate(projectile, transform.position, transform.rotation);
+            GameObject proj = Instantiate(projectile, transform.position + transform.forward, transform.rotation);
             proj.transform.up = transform.forward;
             animator.SetTrigger("isShooting");
-            animator.SetBool("isRunning", false);
             curAttackCooldownSeconds = 0.0f;
         }
         curAttackCooldownSeconds += Time.deltaTime;

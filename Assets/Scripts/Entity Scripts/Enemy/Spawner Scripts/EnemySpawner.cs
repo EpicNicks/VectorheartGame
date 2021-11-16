@@ -56,6 +56,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 GameObject go = Instantiate(enemyPrefabs[(int)enemiesSpawned++ % enemyPrefabs.Count], transform.position, Quaternion.identity, transform);
                 go.GetComponent<DeathReporter>().mySpawner = this;
+                go.transform.position = new Vector2(go.transform.position.x, go.transform.position.y);
             }
         }
     }
