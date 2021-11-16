@@ -9,35 +9,29 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject button;
 
-    void Update()
+    public void TogglePause()
     {
-        //press Escape key or click Pause button to call PauseMenu
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (GameIsPaused)
         {
-            if (GameIsPaused)
-            {
-                button.SetActive(true);
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
+            Resume();
+        }
+        else
+        {
+            Pause();
         }
     }
-
 
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        //Cursor.visible = false;
+        Cursor.visible = false;
         button.SetActive(true);
     }
     public void Pause()
     {
-        //Cursor.visible = true;
+        Cursor.visible = true;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
