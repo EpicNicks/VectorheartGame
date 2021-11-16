@@ -25,6 +25,7 @@ public class SpawnerMaster : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log($"curwave: {curWave}, {spawners.Where(s => s.WaveId == curWave).All(s => s.Exhausted)}");
         if (curWave < numOfWaves)
         {
             if (curDelaySeconds >= waveDelaySeconds)

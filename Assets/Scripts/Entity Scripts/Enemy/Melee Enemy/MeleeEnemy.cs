@@ -29,13 +29,18 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField]
     private GameObject attackVfx;
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        gameObject.AddComponent<DeathReporter>();
+    }
+
     void Start()
     {
         hp = GetComponent<EnemyHP>();
         player = FindObjectOfType<CharacterInput>().gameObject;
         hp.OnEnemyHPChanged += Hp_OnEnemyHPChanged;
     }
+
     private void Hp_OnEnemyHPChanged(int newHP)
     {
         //play hurt animation
@@ -45,7 +50,6 @@ public class MeleeEnemy : MonoBehaviour
             animator.SetBool("isDead", true);
         }
     }
-    // Update is called once per frame
     void Update()
     {
         if (!animator.GetBool("isDead"))

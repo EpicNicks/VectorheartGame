@@ -49,6 +49,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Spawn()
     {
+        Debug.Log($"Spawned at {name}");
         if (enemyPrefabs.Count > 0)
         {
             if (!Exhausted)
@@ -61,6 +62,7 @@ public class EnemySpawner : MonoBehaviour
 
     public void Report()
     {
+        Debug.Log($"deadcount: {deadCount}, exhaused: {Exhausted}");
         deadCount++;
     }
 }

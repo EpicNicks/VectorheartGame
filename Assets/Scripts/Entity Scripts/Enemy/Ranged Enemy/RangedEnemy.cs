@@ -26,6 +26,7 @@ public class RangedEnemy : MonoBehaviour
 
     private void Awake()
     {
+        gameObject.AddComponent<DeathReporter>();
         hp = GetComponent<EnemyHP>();
         player = FindObjectOfType<CharacterInput>().gameObject;
         hp.OnEnemyHPChanged += Hp_OnEnemyHPChanged;
