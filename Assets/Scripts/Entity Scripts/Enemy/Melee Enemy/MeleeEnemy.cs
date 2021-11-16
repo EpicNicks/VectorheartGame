@@ -63,6 +63,7 @@ public class MeleeEnemy : MonoBehaviour
         if (Vector2.Distance(transform.position, player.transform.position) >= attackFromDist)
         {
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            animator.SetBool("isRunning", true);
         }
     }
 
