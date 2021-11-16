@@ -166,7 +166,7 @@ public class PlayerStateManager
             Vector3 frontOfPlayer = psm.player.transform.position + psm.player.transform.forward * psm.player.AttackRadius;
             if (psm.player.AttackVfx)
             {
-                Object.Instantiate(psm.player.AttackVfx, psm.player.transform.position, Quaternion.identity);
+                Object.Instantiate(psm.player.AttackVfx, psm.player.transform.position + psm.player.transform.forward, Quaternion.identity, psm.player.transform);
             }
             foreach (RaycastHit2D hit in Physics2D.CircleCastAll(frontOfPlayer, psm.player.AttackRadius, Vector2.up))
             {
@@ -197,6 +197,7 @@ public class PlayerStateManager
         
         public DashState(PlayerStateManager psm) : base(psm)
         {
+            psm.player.DashSfx.SetActive(true);
             curDashCooldownSeconds = psm.player.DashAttackCooldownSeconds;
         }
         public override PlayerState OnInput(InputAction.CallbackContext ctx)
@@ -244,6 +245,7 @@ public class PlayerStateManager
         {
             if (hasCompletedDash)
             {
+                psm.player.DashSfx.SetActive(false);
                 if (psm.move != Vector2.zero)
                 {
                     return new MovingState(psm);

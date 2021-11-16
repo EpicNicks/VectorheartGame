@@ -9,6 +9,6 @@ public class DeathReporter : MonoBehaviour
 
     private void OnDestroy()
     {
-        mySpawner.Report();
+        mySpawner?.Report();
     }
 }

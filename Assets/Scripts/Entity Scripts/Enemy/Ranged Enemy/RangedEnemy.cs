@@ -77,7 +77,7 @@ public class RangedEnemy : MonoBehaviour
     {
         if (curAttackCooldownSeconds >= attackCooldownSeconds)
         {
-            GameObject proj = Instantiate(projectile, transform.position + transform.forward, transform.rotation);
+            GameObject proj = Instantiate(projectile, transform.position + transform.forward * 3, transform.rotation);
             proj.transform.up = transform.forward;
             animator.SetTrigger("isShooting");
             curAttackCooldownSeconds = 0.0f;

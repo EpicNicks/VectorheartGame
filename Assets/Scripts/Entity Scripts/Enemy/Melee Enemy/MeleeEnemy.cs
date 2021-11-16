@@ -11,9 +11,9 @@ public class MeleeEnemy : MonoBehaviour
 
     public Animator animator;
 
-    public int AttackAngleDegrees;
-    public int AttackDamage;
-    public int AttackRadius;
+    public int AttackAngleDegrees = 60;
+    public int AttackDamage = 15;
+    public int AttackRadius = 1;
 
     [SerializeField]
     private float moveSpeed = 1.0f;
@@ -91,6 +91,7 @@ public class MeleeEnemy : MonoBehaviour
                     }
                 }
             }
+            Instantiate(attackVfx, transform.position, transform.rotation, transform);
         }
         curAttackCooldownSeconds += Time.deltaTime;
     }
