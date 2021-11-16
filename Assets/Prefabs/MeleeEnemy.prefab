@@ -969,6 +969,7 @@ MonoBehaviour:
   attackFromDist: 1
   attackCooldownSeconds: 2
   attackSfx: {fileID: 0}
+  attackVfx: {fileID: 1258653862633811824, guid: 8a6036787aea3194bb5f9a6716753b52, type: 3}
 --- !u!58 &2969594164284960297
 CircleCollider2D:
   m_ObjectHideFlags: 0

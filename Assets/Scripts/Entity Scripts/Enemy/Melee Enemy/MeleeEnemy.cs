@@ -26,6 +26,9 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField]
     private GameObject attackSfx;
 
+    [SerializeField]
+    private GameObject attackVfx;
+
     // Start is called before the first frame update
     void Start()
     {
