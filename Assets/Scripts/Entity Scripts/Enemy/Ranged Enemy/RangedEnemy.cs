@@ -8,6 +8,8 @@ public class RangedEnemy : MonoBehaviour
     private EnemyHP hp;
     private GameObject player;
 
+    public Animator animator;
+
     [SerializeField]
     private float moveSpeed = 1.0f;
     [SerializeField]
@@ -35,7 +37,7 @@ public class RangedEnemy : MonoBehaviour
         if (newHP <= 0)
         {
             //do death animation or whatever else
-            Destroy(gameObject);
+            animator.SetBool("isDead", true);
         }
     }
 
@@ -51,6 +53,7 @@ public class RangedEnemy : MonoBehaviour
         if (Vector2.Distance(transform.position, player.transform.position) >= attackFromDist)
         {
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            animator.SetBool("isRunning", true);
         }
     }
 
@@ -59,6 +62,7 @@ public class RangedEnemy : MonoBehaviour
         if (curAttackCooldownSeconds >= attackCooldownSeconds)
         {
             Instantiate(projectile, transform.position, transform.rotation);
+            animator.SetTrigger("isShooting");
             curAttackCooldownSeconds = 0.0f;
         }
         curAttackCooldownSeconds += Time.deltaTime;

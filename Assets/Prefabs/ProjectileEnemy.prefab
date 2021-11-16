@@ -650,7 +650,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 81d2d68e600cda740a6f4a8a165577de, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -682,10 +682,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9704df2955fc3154a932371f89f1fbda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 6207118635806531556}
   moveSpeed: 5
   attackFromDist: 5
   attackCooldownSeconds: 3
   projectile: {fileID: 2062294832675785325, guid: 68842927e72d126448ed077a897288f0, type: 3}
+  attackSfx: {fileID: 0}
 --- !u!1 &6983236249050197607
 GameObject:
   m_ObjectHideFlags: 0
