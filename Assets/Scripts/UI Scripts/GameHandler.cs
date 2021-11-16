@@ -19,10 +19,13 @@ public class GameHandler : MonoBehaviour {
     {
         fullHP = playerHP.HP;
         playerHP.OnPlayerHPChanged += PlayerHP_OnPlayerHPChanged;
+    }
+    private void Update()
+    {
+        //here should be a function to get current score;
         //will set text as Current Score
-        countScore.text = "Score";
-        finalScore.text = "Score";
-        //healthBar.SetSize(.5f);
+        countScore.text = "1";
+        finalScore.text = "1";
     }
 
     private void PlayerHP_OnPlayerHPChanged(int newHP)
