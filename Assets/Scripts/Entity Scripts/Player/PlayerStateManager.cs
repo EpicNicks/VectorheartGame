@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -229,7 +230,11 @@ public class PlayerStateManager
             
             while (elapsed < psm.player.DashSeconds)
             {
-                psm.player.transform.position = Vector2.Lerp(initialPos, destination, elapsed / psm.player.DashSeconds);
+                var rc = Physics2D.RaycastAll(psm.player.transform.position + 2 * psm.player.transform.forward, psm.player.transform.forward, 0.8f);
+                if (rc.Length == 0)
+                {
+                    psm.player.transform.position = Vector2.Lerp(initialPos, destination, elapsed / psm.player.DashSeconds);
+                }
                 elapsed += Time.deltaTime;
                 yield return null;
             }
