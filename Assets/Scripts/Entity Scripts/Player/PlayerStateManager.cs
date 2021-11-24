@@ -1,5 +1,5 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -15,12 +15,44 @@ public class PlayerStateManager
     private CharacterInput player;
     private PlayerState state;
 
+    public int MaxCharge => 100;
+    private int curCharge = 0;
+    public int CurCharge
+    {
+        get => curCharge;
+        private set
+        {
+            curCharge = Mathf.Min(CurCharge + value, MaxCharge);
+            OnEnergyChanged?.Invoke(curCharge);
+        }
+    }
+
+    public event Action<int> OnEnergyChanged;
+
+    public bool isCharged => curCharge >= 75;
+
+    public void Ultimate()
+    {
+        if (isCharged)
+        {
+            CurCharge = 0;
+            // uncomment when ultimate trigger exists
+            // player.Anim.SetTrigger("Ultimate");
+        }
+    }
+
+
     private Vector2 move;
     public bool isSprinting { get; private set; }
 
     public PlayerStateManager(CharacterInput player)
     {
         this.player = player;
+        state = new IdleState(this);
+    }
+
+    public void ForceIdle()
+    {
         state = new IdleState(this);
     }
 
@@ -71,6 +103,27 @@ public class PlayerStateManager
                 curDashCooldownSeconds -= Time.deltaTime;
             }
             return this;
+        }
+
+        protected virtual void SpawnHitbox(Vector3 offset, float radius, int damage)
+        {
+            foreach (RaycastHit2D hit in Physics2D.CircleCastAll(offset, radius, Vector2.up))
+            {
+                Debug.Log(hit.collider.gameObject);
+                float hitAngle = Vector2.Angle(psm.player.transform.position, hit.point);
+                if (hitAngle > -psm.player.AttackAngleDegrees && hitAngle < psm.player.AttackAngleDegrees)
+                {
+                    EnemyHP enemyHp = hit.transform.GetComponent<EnemyHP>();
+                    if (enemyHp != null)
+                    {
+                        enemyHp.HP -= damage;
+                        if (enemyHp.HP <= 0)
+                        {
+                            psm.CurCharge += enemyHp.ChargePercent;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -167,21 +220,9 @@ public class PlayerStateManager
             Vector3 frontOfPlayer = psm.player.transform.position + psm.player.transform.forward * psm.player.AttackRadius;
             if (psm.player.AttackVfx)
             {
-                Object.Instantiate(psm.player.AttackVfx, psm.player.transform.position + psm.player.transform.forward, Quaternion.identity, psm.player.transform);
+                UnityEngine.Object.Instantiate(psm.player.AttackVfx, psm.player.transform.position + psm.player.transform.forward, Quaternion.identity, psm.player.transform);
             }
-            foreach (RaycastHit2D hit in Physics2D.CircleCastAll(frontOfPlayer, psm.player.AttackRadius, Vector2.up))
-            {
-                Debug.Log(hit.collider.gameObject);
-                float hitAngle = Vector2.Angle(psm.player.transform.position, hit.point);
-                if (hitAngle > -psm.player.AttackAngleDegrees && hitAngle < psm.player.AttackAngleDegrees)
-                {
-                    EnemyHP enemyHp = hit.transform.GetComponent<EnemyHP>();
-                    if (enemyHp != null)
-                    {
-                        enemyHp.HP -= psm.player.AttackDamage;
-                    }
-                }
-            }
+            SpawnHitbox(frontOfPlayer, psm.player.AttackRadius, psm.player.AttackDamage);
             return base.DoState(ctx);
         }
 
@@ -230,8 +271,12 @@ public class PlayerStateManager
             
             while (elapsed < psm.player.DashSeconds)
             {
+                // Don't bother with LayerMasks. The walls are Wall, the player is Wall. The enemies are Wall. I live in your walls. I live in your walls.
+                // I live in your walls. I live in your walls. I live in your walls. I live in your walls. I live in your walls. I live in your walls.
+                // I live in your walls. I live in your walls. I live in your walls. I live in your walls. I live in your walls. I live in your walls.
+                // I live in your walls. I live in your walls. I live in your walls. I live in your walls. I live in your walls. I live in your walls.
                 var rc = Physics2D.RaycastAll(psm.player.transform.position + 2 * psm.player.transform.forward, psm.player.transform.forward, 0.8f);
-                if (rc.Length == 0)
+                if (rc.Where(c => !c.transform.CompareTag("Enemy")).Count() == 0)
                 {
                     psm.player.transform.position = Vector2.Lerp(initialPos, destination, elapsed / psm.player.DashSeconds);
                 }

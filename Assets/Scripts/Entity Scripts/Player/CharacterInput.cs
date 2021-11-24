@@ -87,6 +87,29 @@ public class CharacterInput : MonoBehaviour
         psm.ConsumeInput(ctx);
     }
 
+    public void Ultimate(InputAction.CallbackContext ctx)
+    {
+        psm.Ultimate();
+    }
+
+    public void UltimateStart()
+    {
+        psm.ForceIdle();
+    }
+
+    public void UltimateHitbox()
+    {
+        foreach (var enemyHP in FindObjectsOfType<EnemyHP>())
+        {
+            enemyHP.HP = 0;
+        }
+    }
+
+    public void UltimateEnd()
+    {
+
+    }
+
     public void Die()
     {
         Destroy(gameObject);
