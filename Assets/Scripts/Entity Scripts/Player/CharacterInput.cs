@@ -59,6 +59,8 @@ public class CharacterInput : MonoBehaviour
 
     private PlayerStateManager psm;
 
+    public event System.Action<int> OnEnergyChanged;
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawRay(transform.position, transform.forward * 5);
@@ -70,7 +72,13 @@ public class CharacterInput : MonoBehaviour
     private void Awake()
     {
         psm = new PlayerStateManager(this);
+        psm.OnEnergyChanged += OnEnergyChangedEvent;
         anim ??= GetComponent<Animator>();
+    }
+
+    private void OnEnergyChangedEvent(int energy)
+    {
+        OnEnergyChanged?.Invoke(energy);
     }
 
     private void Update()
