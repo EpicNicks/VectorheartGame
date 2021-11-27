@@ -119,7 +119,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.36519504, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.30162096, a: 1}
   m_Intensity: 1
   m_Range: 5
   m_SpotAngle: 30
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saberActive: 1
-  bladeColor: {r: 1, g: 0.040958375, b: 0, a: 1}
+  bladeColor: {r: 1, g: 0, b: 0.30162096, a: 1}
   trailsActivated: 1
   BladeExtendSpeed: 0.3
 --- !u!114 &6411028721249610838
