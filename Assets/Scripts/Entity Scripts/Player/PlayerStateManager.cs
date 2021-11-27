@@ -20,7 +20,7 @@ public class PlayerStateManager
     public int CurCharge
     {
         get => curCharge;
-        private set
+        set
         {
             curCharge = Mathf.Min(CurCharge + value, MaxCharge);
             OnEnergyChanged?.Invoke(curCharge);
@@ -103,27 +103,6 @@ public class PlayerStateManager
                 curDashCooldownSeconds -= Time.deltaTime;
             }
             return this;
-        }
-
-        protected virtual void SpawnHitbox(Vector3 offset, float radius, int damage)
-        {
-            foreach (RaycastHit2D hit in Physics2D.CircleCastAll(offset, radius, Vector2.up))
-            {
-                Debug.Log(hit.collider.gameObject);
-                float hitAngle = Vector2.Angle(psm.player.transform.position, hit.point);
-                if (hitAngle > -psm.player.AttackAngleDegrees && hitAngle < psm.player.AttackAngleDegrees)
-                {
-                    EnemyHP enemyHp = hit.transform.GetComponent<EnemyHP>();
-                    if (enemyHp != null)
-                    {
-                        enemyHp.HP -= damage;
-                        if (enemyHp.HP <= 0)
-                        {
-                            psm.CurCharge += enemyHp.ChargePercent;
-                        }
-                    }
-                }
-            }
         }
     }
 
@@ -222,7 +201,7 @@ public class PlayerStateManager
             {
                 UnityEngine.Object.Instantiate(psm.player.AttackVfx, psm.player.transform.position + psm.player.transform.forward, Quaternion.identity, psm.player.transform);
             }
-            SpawnHitbox(frontOfPlayer, psm.player.AttackRadius, psm.player.AttackDamage);
+            // SpawnHitbox(frontOfPlayer, psm.player.AttackRadius, psm.player.AttackDamage);
             return base.DoState(ctx);
         }
 
