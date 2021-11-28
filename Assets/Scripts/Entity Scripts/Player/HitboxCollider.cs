@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Collider))]
 public class HitboxCollider : MonoBehaviour
 {
     [SerializeField]
     private CharacterInput player;
     [SerializeField]
-    private Collider2D col;
+    private Collider col;
 
-    private List<Collider2D> collided = new List<Collider2D>{};
+    private List<Collider> collided = new List<Collider>{};
 
     private void Awake()
     {
         if (col == null)
         {
-            col = GetComponent<Collider2D>();
+            col = GetComponent<Collider>();
             col.isTrigger = true;
         }
         if (player == null)
@@ -27,9 +27,14 @@ public class HitboxCollider : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         collided.Add(collision);
+    }
+
+    public void StartStrike()
+    {
+        col.enabled = true;
     }
 
     /// <summary>
@@ -45,5 +50,6 @@ public class HitboxCollider : MonoBehaviour
             }
         }
         collided.Clear();
+        col.enabled = false;
     }
 }

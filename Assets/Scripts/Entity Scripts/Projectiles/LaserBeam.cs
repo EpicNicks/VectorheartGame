@@ -37,6 +37,8 @@ public class LaserBeam : MonoBehaviour
 
     private void CheckBounce()
     {
+        // TODO: Fix for 3D
+
         Ray2D ray = new Ray2D(transform.position, transform.up);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Time.deltaTime * speed + colRadius, collisionMask);
         if (hit.collider != null)

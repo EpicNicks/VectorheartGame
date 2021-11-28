@@ -60,14 +60,14 @@ public class MeleeEnemy : MonoBehaviour
     }
     private void MoveToPlayer()
     {
-        //float rot_z = Mathf.Atan2(player.transform.position.y, player.transform.position.x) * Mathf.Rad2Deg;
-        //transform.rotation = Quaternion.Euler(0f, 0f, 90 - rot_z);
-        transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position, -Vector3.forward);
-        //transform.forward = player.transform.position - transform.position;
-        if (Vector2.Distance(transform.position, player.transform.position) >= attackFromDist)
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
-            animator.SetBool("isRunning", true);
+            transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position, -Vector3.forward);
+            if (Vector2.Distance(transform.position, player.transform.position) >= attackFromDist)
+            {
+                transform.position += transform.forward * moveSpeed * Time.deltaTime;
+                animator.SetBool("isRunning", true);
+            }
         }
     }
 
@@ -77,23 +77,27 @@ public class MeleeEnemy : MonoBehaviour
         {
             //Make a cone slash
             animator.SetTrigger("Attack");
-            curAttackCooldownSeconds = 0.0f;
-            Vector3 frontOfPlayer = transform.position + transform.up * AttackRadius;
-            foreach (RaycastHit2D hit in Physics2D.CircleCastAll(frontOfPlayer, AttackRadius, Vector2.up))
-            {
-                float hitAngle = Vector2.Angle(transform.position, hit.point);
-                if (hitAngle > -AttackAngleDegrees && hitAngle < AttackAngleDegrees)
-                {
-                    PlayerHP playerHP = hit.transform.GetComponent<PlayerHP>();
-                    if (playerHP != null)
-                    {
-                        playerHP.HP -= AttackDamage;
-                    }
-                }
-            }
-            Instantiate(attackVfx, transform.position, transform.rotation, transform);
         }
         curAttackCooldownSeconds += Time.deltaTime;
+    }
+
+    public void AttackAnimationEvent()
+    {
+        curAttackCooldownSeconds = 0.0f;
+        Vector3 frontOfPlayer = transform.position + transform.up * AttackRadius;
+        foreach (RaycastHit hit in Physics.SphereCastAll(frontOfPlayer, AttackRadius, Vector2.up))
+        {
+            float hitAngle = Vector2.Angle(transform.position, hit.point);
+            if (hitAngle > -AttackAngleDegrees && hitAngle < AttackAngleDegrees)
+            {
+                PlayerHP playerHP = hit.transform.GetComponent<PlayerHP>();
+                if (playerHP != null)
+                {
+                    playerHP.HP -= AttackDamage;
+                }
+            }
+        }
+        Instantiate(attackVfx, transform.position, transform.rotation, transform);
     }
 
     public void Die()
