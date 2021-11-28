@@ -1337,7 +1337,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 198901652}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06c8d018678ad4b2e8d8ed1913f7853b, type: 3}
+  m_Script: {fileID: 11500000, guid: b7227b4eccf7c42faa2f96c1f5818407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mask: {fileID: 198901652}
@@ -3965,6 +3965,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 491480196172109508, guid: 4307cc3e660ff8e43aa79e3745326179, type: 3}
   m_PrefabInstance: {fileID: 1846653277}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &810015553 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 491480196172109511, guid: 4307cc3e660ff8e43aa79e3745326179, type: 3}
+  m_PrefabInstance: {fileID: 1846653277}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810015552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a660797d475ff2a4091a7918d78ffa70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &810015559 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2299790436233566742, guid: 4307cc3e660ff8e43aa79e3745326179, type: 3}
@@ -9254,7 +9265,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 889065419}
+  energyBar: {fileID: 198901654}
   playerHP: {fileID: 810015559}
+  characterInput: {fileID: 810015553}
   countScore: {fileID: 1389956082}
   FailScreen: {fileID: 7580404025454146155}
   finalScore: {fileID: 501136192}
