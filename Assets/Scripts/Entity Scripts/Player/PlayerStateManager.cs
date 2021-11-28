@@ -30,6 +30,7 @@ public class PlayerStateManager
     public event Action<int> OnEnergyChanged;
 
     public bool isCharged => curCharge >= 75;
+    public bool fullCharged => curCharge == MaxCharge;
 
     public void Ultimate()
     {
@@ -120,6 +121,10 @@ public class PlayerStateManager
             {
                 return new MovingState(psm);
             }
+            if (ctx.action.name.Equals("Attack") && ctx.action.phase == InputActionPhase.Started)
+            {
+                return new AttackingState(psm);
+            }
             return this;
         }
 
@@ -156,7 +161,7 @@ public class PlayerStateManager
             {
                 return new AttackingState(psm);
             }
-            if (ctx.action.name.Equals("Dash") && ctx.action.phase == InputActionPhase.Started && curDashCooldownSeconds <= 0)
+            if (ctx.action.name.Equals("Dash") && ctx.action.phase == InputActionPhase.Started && curDashCooldownSeconds <= 0 && psm.isCharged)
             {
                 return new DashState(psm);
             }
@@ -210,6 +215,7 @@ public class PlayerStateManager
         }
     }
 
+    // TODO: dash attack animation
     private class DashState : PlayerState
     {
         private bool hasStartedDash = false;
