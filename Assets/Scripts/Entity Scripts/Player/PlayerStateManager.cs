@@ -201,7 +201,6 @@ public class PlayerStateManager
             {
                 UnityEngine.Object.Instantiate(psm.player.AttackVfx, psm.player.transform.position + psm.player.transform.forward, Quaternion.identity, psm.player.transform);
             }
-            // SpawnHitbox(frontOfPlayer, psm.player.AttackRadius, psm.player.AttackDamage);
             return base.DoState(ctx);
         }
 

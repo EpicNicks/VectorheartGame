@@ -24,9 +24,6 @@ public class RangedEnemy : MonoBehaviour
     [SerializeField]
     private GameObject attackSfx;
 
-    [SerializeField]
-    private Collider2D col;
-
     private void Awake()
     {
         gameObject.AddComponent<DeathReporter>();
@@ -35,10 +32,6 @@ public class RangedEnemy : MonoBehaviour
         hp.OnEnemyHPChanged += Hp_OnEnemyHPChanged;
     }
 
-    private void Start()
-    {
-        col.transform.position = new Vector3(col.transform.position.x, col.transform.position.y, 0);
-    }
 
     private void Hp_OnEnemyHPChanged(int newHP)
     {
