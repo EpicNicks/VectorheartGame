@@ -3,7 +3,7 @@ This was a game developed for projects 3 and 4 of our DATT 4300 game design proj
 comes from the [Vectorheart](https://cari.institute/aesthetics/vectorheart) artstyle. 
 
 ## Project Credits
-<b>Programmer</b>: Nicholas Cerisano<br>
+<b>Lead Programmer, Core Systems Programmer</b>: Nicholas Cerisano<br>
 <b>3D Artist, Animator</b>: Eyad Tawfik<br>
 <b>Level Designer</b>: Jiahui Han<br>
 <b>UI/UX Designer, UI Programmer</b>: Xinyang Wang<br>
