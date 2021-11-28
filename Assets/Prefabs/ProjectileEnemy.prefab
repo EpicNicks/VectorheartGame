@@ -615,7 +615,8 @@ GameObject:
   - component: {fileID: 6207118635806531556}
   - component: {fileID: 8878554360515516606}
   - component: {fileID: 1651812825494992516}
-  - component: {fileID: 2535364302732687687}
+  - component: {fileID: 6541311239491969735}
+  - component: {fileID: 7260546988435595217}
   m_Layer: 6
   m_Name: ProjectileEnemy
   m_TagString: Enemy
@@ -672,6 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 90
+  chargePercent: 5
 --- !u!114 &1651812825494992516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,28 +692,37 @@ MonoBehaviour:
   attackCooldownSeconds: 3
   projectile: {fileID: 2062294832675785325, guid: 68842927e72d126448ed077a897288f0, type: 3}
   attackSfx: {fileID: 0}
-  col: {fileID: 7166474264117788991}
---- !u!50 &2535364302732687687
-Rigidbody2D:
-  serializedVersion: 4
+  col: {fileID: 0}
+--- !u!54 &6541311239491969735
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6549769130862429821}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  serializedVersion: 2
   m_Mass: 1
-  m_LinearDrag: 0
+  m_Drag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
   m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &7260546988435595217
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6549769130862429821}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.46
+  m_Height: 6.86
+  m_Direction: 1
+  m_Center: {x: 0.06, y: 2.33, z: 0}
 --- !u!1 &6983236249050197607
 GameObject:
   m_ObjectHideFlags: 0

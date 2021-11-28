@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 3826082870683176928}
   - component: {fileID: 4332059588641524903}
   - component: {fileID: 6411028721249610838}
+  - component: {fileID: 8803674908426131286}
   m_Layer: 0
   m_Name: Saber Purple
   m_TagString: Untagged
@@ -283,6 +284,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spinDirection: {x: 10, y: 200, z: 100}
+--- !u!136 &8803674908426131286
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3826082870685176098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.13498905
+  m_Height: 3.28
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.24, z: 0.000000052154064}
 --- !u!1 &5476302567977408931
 GameObject:
   m_ObjectHideFlags: 0
