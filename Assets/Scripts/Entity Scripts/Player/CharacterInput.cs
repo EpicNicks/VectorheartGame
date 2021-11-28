@@ -58,6 +58,7 @@ public class CharacterInput : MonoBehaviour
     #endregion
 
     private PlayerStateManager psm;
+    public PlayerStateManager Psm => psm;
 
     public event System.Action<int> OnEnergyChanged;
 
