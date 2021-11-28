@@ -6,8 +6,8 @@ comes from the [Vectorheart](https://cari.institute/aesthetics/vectorheart) arts
 <b>Programmer</b>: Nicholas Cerisano<br>
 <b>3D Artist, Animator</b>: Eyad Tawfik<br>
 <b>Level Designer</b>: Jiahui Han<br>
-<b>UI/UX Designer, UI Programmer</b>: Ian<br>
-<b>2D and UI Artist, Music Composer</b>: Lukas<br>
+<b>UI/UX Designer, UI Programmer</b>: Xinyang Wang<br>
+<b>2D and UI Artist, Music Composer</b>: Lukas Radlin<br>
 
 ## Link to itch.io builds:
 
