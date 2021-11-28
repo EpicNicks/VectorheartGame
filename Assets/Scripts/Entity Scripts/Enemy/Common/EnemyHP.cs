@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyHP : MonoBehaviour
@@ -17,4 +15,8 @@ public class EnemyHP : MonoBehaviour
 
     public delegate void EnemyHPChanged(int newHP);
     public event EnemyHPChanged OnEnemyHPChanged;
+
+    [SerializeField]
+    private int chargePercent = 5;
+    public int ChargePercent => chargePercent;
 }
