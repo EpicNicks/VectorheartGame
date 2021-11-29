@@ -45,7 +45,8 @@ public class CharacterInput : MonoBehaviour
     [SerializeField]
     private float dashAttackCooldownSeconds;
     public float DashAttackCooldownSeconds => dashAttackCooldownSeconds;
-    public float CurDashCooldownSeconds => psm.CurDashCooldownSeconds;
+    public event System.Action<float> OnDashCooldownSecondsChanged;
+
     [SerializeField]
     private Collider dashAttackHitbox;
     public Collider DashAttackHitbox => dashAttackHitbox;
@@ -74,13 +75,9 @@ public class CharacterInput : MonoBehaviour
     private void Awake()
     {
         psm = new PlayerStateManager(this);
-        psm.OnEnergyChanged += OnEnergyChangedEvent;
+        psm.OnEnergyChanged += (energy) => OnEnergyChanged?.Invoke(energy);
+        psm.DashCooldownSecondsChangedEvent += (cooldownSeconds) => OnDashCooldownSecondsChanged?.Invoke(cooldownSeconds);
         anim ??= GetComponent<Animator>();
-    }
-
-    private void OnEnergyChangedEvent(int energy)
-    {
-        OnEnergyChanged?.Invoke(energy);
     }
 
     private void Update()

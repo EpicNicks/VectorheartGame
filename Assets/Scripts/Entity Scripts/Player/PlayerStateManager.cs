@@ -32,7 +32,7 @@ public class PlayerStateManager
     public bool isCharged => curCharge >= 75;
     public bool fullCharged => curCharge == MaxCharge;
 
-    public float CurDashCooldownSeconds => PlayerState.curDashCooldownSeconds;
+    public event Action<float> DashCooldownSecondsChangedEvent;
 
     public void Ultimate()
     {
@@ -91,7 +91,16 @@ public class PlayerStateManager
     {
         protected PlayerStateManager psm;
 
-        public static float curDashCooldownSeconds;
+        protected static float curDashCooldownSeconds;
+        public float CurDashCooldownSeconds
+        {
+            get => curDashCooldownSeconds;
+            set
+            {
+                curDashCooldownSeconds = value;
+                psm.DashCooldownSecondsChangedEvent?.Invoke(value);
+            }
+        }
 
         public PlayerState(PlayerStateManager psm)
         {
