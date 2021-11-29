@@ -32,6 +32,8 @@ public class PlayerStateManager
     public bool isCharged => curCharge >= 75;
     public bool fullCharged => curCharge == MaxCharge;
 
+    public float CurDashCooldownSeconds => PlayerState.curDashCooldownSeconds;
+
     public void Ultimate()
     {
         if (isCharged)
@@ -89,7 +91,7 @@ public class PlayerStateManager
     {
         protected PlayerStateManager psm;
 
-        protected static float curDashCooldownSeconds;
+        public static float curDashCooldownSeconds;
 
         public PlayerState(PlayerStateManager psm)
         {

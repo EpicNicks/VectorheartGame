@@ -45,6 +45,7 @@ public class CharacterInput : MonoBehaviour
     [SerializeField]
     private float dashAttackCooldownSeconds;
     public float DashAttackCooldownSeconds => dashAttackCooldownSeconds;
+    public float CurDashCooldownSeconds => psm.CurDashCooldownSeconds;
     [SerializeField]
     private Collider dashAttackHitbox;
     public Collider DashAttackHitbox => dashAttackHitbox;
