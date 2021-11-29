@@ -8,13 +8,10 @@ public class EnergyBar : MonoBehaviour
     private float ratio;
 
 
-    // Start is called before the first frame update
-    //void Start()
-    //{
-    //    mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 80);
-    //}
     private void Start()
     {
+
+        //energy ratio not sure
         ratio = 82f / 100f;
     }
 

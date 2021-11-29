@@ -9,6 +9,7 @@ public class GameHandler : MonoBehaviour {
 
     [SerializeField] private NewHealthBar healthBar;
     [SerializeField] private EnergyBar energyBar;
+    [SerializeField] private AbilitiesUI abilityMask;
     [SerializeField] private PlayerHP playerHP;
     [SerializeField] private CharacterInput characterInput;
     public TextMeshProUGUI countScore;
@@ -20,6 +21,8 @@ public class GameHandler : MonoBehaviour {
     private float currentHPPercent;
     private int fullEnergy;
     private float currentEnergyPercent;
+    private float fullCooldown;
+    private float currentCoolDown;
 
     private int score;
     public int Score
@@ -42,6 +45,10 @@ public class GameHandler : MonoBehaviour {
         //suppose energy maximum is 100
         fullEnergy = characterInput.Psm.MaxCharge;
         characterInput.OnEnergyChanged += characterInput_OnEnergyChanged;
+
+       
+        fullCooldown = characterInput.DashAttackCooldownSeconds;
+        characterInput.OnDashCooldownSecondsChanged += characterInput_OnDDashCooldownSecondsChanged; 
     }
 
     private void PlayerHP_OnPlayerHPChanged(int newHP)
@@ -60,6 +67,11 @@ public class GameHandler : MonoBehaviour {
     {
         currentEnergyPercent = (float)newEnergy / fullEnergy;
         energyBar.SetSize(currentEnergyPercent);
+    }
+    private void characterInput_OnDDashCooldownSecondsChanged(float newCooldown)
+    {
+        currentCoolDown = (float)newCooldown / fullCooldown;
+        abilityMask.SetSize(currentCoolDown);
     }
 
 }

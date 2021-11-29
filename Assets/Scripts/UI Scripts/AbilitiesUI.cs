@@ -7,28 +7,13 @@ public class AbilitiesUI : MonoBehaviour
     public GameObject mask;
     private float TestTimer;
     private float TestCoolDown;
-
-
-
-    private void Update()
+    //private float ratio;
+    private void Start()
     {
-        TestTimer += Time.deltaTime;
-        TestCoolDown = TestTimer * 33f;
-        mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100f+ TestCoolDown);
-
-        //test code
-
-        //if(isCoolDown == true)
-        //{
-        //    mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100f + RemainingCoolDown);
-        //}else
-        //{
-        //    mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100f);
-        //}
-
+        //ratio = 1/2;
     }
     public void SetSize(float sizeNormalized)
     {
-        mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100f + sizeNormalized);
+        mask.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100f + sizeNormalized *100);
     }
 }
