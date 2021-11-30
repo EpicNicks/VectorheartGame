@@ -1451,7 +1451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4564666829005352244, guid: 5b96be46bc7f51a40be28c76dd68f408, type: 3}
       propertyPath: m_shaderPropertyID
-      value: 831
+      value: 838
       objectReference: {fileID: 0}
     - target: {fileID: 4564666829005352244, guid: 5b96be46bc7f51a40be28c76dd68f408, type: 3}
       propertyPath: m_materialData.Array.data[0].m_move
@@ -1699,11 +1699,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Saber Purple
       objectReference: {fileID: 0}
+    - target: {fileID: 7249272334113080678, guid: 8102c2633fa0d4ef18ac9b0318a8f4e4, type: 3}
+      propertyPath: col
+      value: 
+      objectReference: {fileID: 1955390696857810232}
+    - target: {fileID: 7249272334113080678, guid: 8102c2633fa0d4ef18ac9b0318a8f4e4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 491480196172109511}
     m_RemovedComponents:
     - {fileID: 6411028721249610838, guid: 8102c2633fa0d4ef18ac9b0318a8f4e4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8102c2633fa0d4ef18ac9b0318a8f4e4, type: 3}
 --- !u!4 &6059281915879386988 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3826082870684945666, guid: 8102c2633fa0d4ef18ac9b0318a8f4e4, type: 3}
+  m_PrefabInstance: {fileID: 6993561175716946542}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1955390696857810232 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 8803674908426131286, guid: 8102c2633fa0d4ef18ac9b0318a8f4e4, type: 3}
   m_PrefabInstance: {fileID: 6993561175716946542}
   m_PrefabAsset: {fileID: 0}
