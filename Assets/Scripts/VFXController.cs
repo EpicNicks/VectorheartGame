@@ -6,7 +6,7 @@ public class VFXController : MonoBehaviour
 {
 
     public GameObject normalAttack;
-    public GameObject spinAttack;
+    public ParticleSystem spinAttack;
     public GameObject ultimateAbility;
     public GameObject dash;
     public GameObject running;
@@ -24,7 +24,8 @@ public class VFXController : MonoBehaviour
 
     public void SpinAttack()
     {
-        Instantiate(spinAttack, spinLocation.position, this.transform.rotation);
+        spinAttack.Play();
+        Debug.Log("isPlayed");
     }
 
     public void StartTrail()
