@@ -6,11 +6,19 @@ public class VFXController : MonoBehaviour
 {
 
     public GameObject normalAttack;
+    public GameObject chargedAttack;
+    public ParticleSystem chargedSpinAttack;
     public ParticleSystem spinAttack;
     public GameObject ultimateAbility;
+    public GameObject chargedDash;
     public GameObject dash;
     public GameObject running;
+    private bool isCharged = false;
 
+    private CharacterInput character;
+
+    public Transform leftFoot;
+    public Transform rightFoot;
     public Transform feet;
     public Transform spinLocation;
 
@@ -20,22 +28,37 @@ public class VFXController : MonoBehaviour
     void Start()
     {
         playerAnim = GetComponent<Animator>();
+        character = GetComponent<CharacterInput>();
     }
 
     public void SpinAttack()
     {
-        spinAttack.Play();
-        Debug.Log("isPlayed");
+        if(isCharged == true)
+        {
+            chargedSpinAttack.Play();
+        } else
+        {
+            spinAttack.Play();
+        }
+       
     }
 
     public void StartTrail()
     {
-        normalAttack.SetActive(true);
+        if (isCharged == true)
+        {
+            chargedAttack.SetActive(true);
+        } else
+        {
+            normalAttack.SetActive(true);
+        }
+
     }
 
     public void EndTrail()
     {
         normalAttack.SetActive(false);
+        chargedAttack.SetActive(false);
     }
 
     public void Ultimate()
@@ -53,8 +76,14 @@ public class VFXController : MonoBehaviour
         dash.SetActive(false);
     }
 
-    public void Running()
+    public void RightFootStep()
     {
-        Instantiate(running, feet.position, this.transform.rotation);
+
+        Instantiate(running, rightFoot.position, new Quaternion(0, 0, 0, 1));
+    }
+
+    public void LeftFootStep()
+    {
+        Instantiate(running, leftFoot.position, new Quaternion(0, 0, 0, 1));
     }
 }
