@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MainMenuCharacter
-  m_Shader: {fileID: -6465566751694194690, guid: a0bd11a9fd2075d4fa480645801459ca, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 2f359a24bf5222a439e6ddad37bbb1fd, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -86,7 +86,7 @@ Material:
     m_Floats:
     - Vector1_08530a86112d4f8fbf46b5fdf0c005b4: 25
     - Vector1_6DC2C68C: 0.1
-    - Vector1_a99422c42023474f8e05832586afaa90: -3.64
+    - Vector1_a99422c42023474f8e05832586afaa90: -0.54
     - Vector1_aded22a5bcc641b8a0711d5d6af7e926: 0.5
     - Vector1_b7600d9e95104447880bff6bf7aa490f: 0.3
     - Vector1_b7600d9e95104447880bff6bf7aa490f_1: 0.1
@@ -121,7 +121,7 @@ Material:
     - Color_3d044386da2747f0a12f944bc931661f: {r: 1, g: 0, b: 0.009897232, a: 0}
     - Color_6b47ad1ec5f54c078aefb2d63f002f19: {r: 63.999992, g: 22.115181, b: 0, a: 0}
     - Color_E448CF9F: {r: 1.498039, g: 0.5411765, b: 0, a: 0}
-    - Color_d13b29e1901748828d4516e66c20ee0f: {r: 0, g: 13.73822, b: 16, a: 0}
+    - Color_d13b29e1901748828d4516e66c20ee0f: {r: 0, g: 25.848827, b: 28.51895, a: 0}
     - Color_d13b29e1901748828d4516e66c20ee0f_1: {r: 54.28272, g: 0, b: 128, a: 0}
     - Vector2_6925FF1E: {r: 1, g: 3, b: 0, a: 0}
     - Vector2_743cd388aa3c4ac3a9a2e217a6753634: {r: 1, g: 15, b: 0, a: 0}
