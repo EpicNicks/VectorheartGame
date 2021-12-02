@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameHandler : MonoBehaviour {
 
@@ -23,6 +24,9 @@ public class GameHandler : MonoBehaviour {
     private float currentEnergyPercent;
     private float fullCooldown;
     private float currentCoolDown;
+
+    public Image healthBarObject;
+    public float updateSpeedSeconds = 0.5f;
 
     private int score;
     public int Score
@@ -51,18 +55,39 @@ public class GameHandler : MonoBehaviour {
         characterInput.OnDashCooldownSecondsChanged += characterInput_OnDDashCooldownSecondsChanged; 
     }
 
+    //private void PlayerHP_OnPlayerHPChanged(int newHP)
+    //{
+    //    currentHPPercent = (float)newHP / fullHP;
+    //    healthBar.SetSize(currentHPPercent);
+
+    //    if (newHP <= 0)
+    //    {
+    //        FailScreen.SetActive(true);
+    //        Time.timeScale = 0f;
+    //    }
+    //}
     private void PlayerHP_OnPlayerHPChanged(int newHP)
     {
         currentHPPercent = (float)newHP / fullHP;
-        healthBar.SetSize(currentHPPercent);
-
+        StartCoroutine(ChangeToHPPct(currentHPPercent));
         if (newHP <= 0)
         {
             FailScreen.SetActive(true);
             Time.timeScale = 0f;
         }
     }
-
+    private IEnumerator ChangeToHPPct(float pct)
+    {
+        float preChangePct = healthBarObject.fillAmount;
+        float elapsed = 0f;
+        while(elapsed < updateSpeedSeconds)
+        {
+            elapsed += Time.deltaTime;
+            healthBarObject.fillAmount = Mathf.Lerp(preChangePct, pct, elapsed / updateSpeedSeconds);
+            yield return null;
+        }
+        healthBarObject.fillAmount = pct;
+    }
     private void characterInput_OnEnergyChanged(int newEnergy)
     {
         currentEnergyPercent = (float)newEnergy / fullEnergy;
