@@ -68,8 +68,8 @@ public class GameHandler : MonoBehaviour {
     //}
     private void PlayerHP_OnPlayerHPChanged(int newHP)
     {
-        currentHPPercent = (float)newHP / fullHP;
-        StartCoroutine(ChangeToHPPct(currentHPPercent));
+        //currentHPPercent = (float)newHP / fullHP;
+        StartCoroutine(ChangeToHPPct((float)newHP));
         if (newHP <= 0)
         {
             FailScreen.SetActive(true);
