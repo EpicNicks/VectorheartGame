@@ -26,6 +26,9 @@ public class GameHandler : MonoBehaviour {
     private float currentCoolDown;
 
     public Image healthBarObject;
+    public Image energyBarObject;
+    public Image AbilityMaskObject;
+    public GameObject UltMaskObject;
     public float updateSpeedSeconds = 0.5f;
 
     private int score;
@@ -90,13 +93,33 @@ public class GameHandler : MonoBehaviour {
     }
     private void characterInput_OnEnergyChanged(int newEnergy)
     {
-        currentEnergyPercent = (float)newEnergy / fullEnergy;
-        energyBar.SetSize(currentEnergyPercent);
+        //currentEnergyPercent = (float)newEnergy / fullEnergy;
+        StartCoroutine(ChangeToEnergyPct((float)newEnergy));
+        if (newEnergy >= fullEnergy)
+        {
+            UltMaskObject.SetActive(true);
+        }
+        else
+        {
+            UltMaskObject.SetActive(false);
+        }
+    }
+    private IEnumerator ChangeToEnergyPct(float pct)
+    {
+        float preChangePct = energyBarObject.fillAmount;
+        float elapsed = 0f;
+        while (elapsed < updateSpeedSeconds)
+        {
+            elapsed += Time.deltaTime;
+            energyBarObject.fillAmount = Mathf.Lerp(preChangePct, pct, elapsed / updateSpeedSeconds);
+            yield return null;
+        }
+        energyBarObject.fillAmount = pct;
     }
     private void characterInput_OnDDashCooldownSecondsChanged(float newCooldown)
     {
         currentCoolDown = (float)newCooldown / fullCooldown;
-        abilityMask.SetSize(currentCoolDown);
+        AbilityMaskObject.fillAmount = currentCoolDown;
     }
 
 }
