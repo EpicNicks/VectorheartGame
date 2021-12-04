@@ -15,6 +15,8 @@ public class MeleeEnemy : MonoBehaviour
     public int AttackDamage = 15;
     public int AttackRadius = 1;
 
+    private float speedMul = 1.0f;
+
     [SerializeField]
     private float moveSpeed = 1.0f;
     [SerializeField]
@@ -69,7 +71,7 @@ public class MeleeEnemy : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position, -Vector3.forward);
         if (Vector2.Distance(transform.position, player.transform.position) >= attackFromDist)
         {
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            transform.position += transform.forward * moveSpeed * Time.deltaTime * speedMul;
             animator.SetBool("isRunning", true);
         }
     }
@@ -79,9 +81,20 @@ public class MeleeEnemy : MonoBehaviour
         if (curAttackCooldownSeconds >= attackCooldownSeconds)
         {
             //Make a cone slash
-            animator.SetTrigger("Attack");
+            animator.SetTrigger("isAttack");
+            Debug.Log("Attacking");
         }
         curAttackCooldownSeconds += Time.deltaTime;
+    }
+
+    public void StopMoving()
+    {
+        speedMul = 0.0f;
+    }
+
+    public void ResumeMoving()
+    {
+        speedMul = 1.0f;
     }
 
     public void AttackAnimationEvent()
