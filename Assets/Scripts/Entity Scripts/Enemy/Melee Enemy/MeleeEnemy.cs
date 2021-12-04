@@ -32,6 +32,10 @@ public class MeleeEnemy : MonoBehaviour
     private void Awake()
     {
         gameObject.AddComponent<DeathReporter>();
+        if (animator == null)
+        {
+            animator = GetComponentInChildren<Animator>();
+        }
     }
 
     void Start()
@@ -46,12 +50,14 @@ public class MeleeEnemy : MonoBehaviour
         //play hurt animation
         if (newHP <= 0)
         {
+            Debug.Log($"Enemy {name} hp changed to {newHP}");
             //do death animation or whatever else
             animator.SetBool("isDead", true);
         }
     }
     void Update()
     {
+        // Debug.Log(animator.GetBool("isDead"));
         if (!animator.GetBool("isDead"))
         {
             MoveToPlayer();
@@ -60,14 +66,11 @@ public class MeleeEnemy : MonoBehaviour
     }
     private void MoveToPlayer()
     {
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position, -Vector3.forward);
+        if (Vector2.Distance(transform.position, player.transform.position) >= attackFromDist)
         {
-            transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position, -Vector3.forward);
-            if (Vector2.Distance(transform.position, player.transform.position) >= attackFromDist)
-            {
-                transform.position += transform.forward * moveSpeed * Time.deltaTime;
-                animator.SetBool("isRunning", true);
-            }
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            animator.SetBool("isRunning", true);
         }
     }
 

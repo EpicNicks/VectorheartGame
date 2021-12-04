@@ -18,8 +18,8 @@ public class HitboxCollider : MonoBehaviour
         if (col == null)
         {
             col = GetComponent<Collider>();
-            col.isTrigger = true;
         }
+        col.isTrigger = true;
         if (player == null)
         {
             player = FindObjectOfType<CharacterInput>();
@@ -47,6 +47,7 @@ public class HitboxCollider : MonoBehaviour
             foreach (var col in collided)
             {
                 player.DealDamageToEnemy(col.GetComponent<EnemyHP>(), damage);
+                Debug.Log($"Dealt {damage} damage to enemy: {col.gameObject.name}");
             }
         }
         collided.Clear();
