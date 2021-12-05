@@ -7,10 +7,8 @@ public class VFXController : MonoBehaviour
 
     public GameObject normalAttack;
     public GameObject chargedAttack;
-    public ParticleSystem chargedSpinAttack;
     public ParticleSystem spinAttack;
     public GameObject ultimateAbility;
-    public GameObject chargedDash;
     public GameObject dash;
     public GameObject running;
 
@@ -31,14 +29,7 @@ public class VFXController : MonoBehaviour
 
     public void SpinAttack()
     {
-        if(character.Psm.isCharged)
-        {
-            chargedSpinAttack.Play();
-        }
-        else
-        {
             spinAttack.Play();
-        }
        
     }
 

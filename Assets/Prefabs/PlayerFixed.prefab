@@ -290,11 +290,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalAttack: {fileID: 8182091101686226277}
-  chargedAttack: {fileID: 0}
-  chargedSpinAttack: {fileID: 0}
+  chargedAttack: {fileID: 4290039708526105285}
   spinAttack: {fileID: 4952671190512428518}
   ultimateAbility: {fileID: 0}
-  chargedDash: {fileID: 0}
   dash: {fileID: 331654151021456555}
   running: {fileID: 3591376891184485176, guid: 05e924b6143b56a4fb11a75e2e2bb112, type: 3}
   leftFoot: {fileID: 5667492440796399129}
@@ -1895,6 +1893,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5777867239115325014}
     m_Modifications:
+    - target: {fileID: 1189722521083461387, guid: 8102c2633fa0d4ef18ac9b0318a8f4e4, type: 3}
+      propertyPath: m_Name
+      value: Normal_VFX_Trail
+      objectReference: {fileID: 0}
     - target: {fileID: 3826082870684945666, guid: 8102c2633fa0d4ef18ac9b0318a8f4e4, type: 3}
       propertyPath: m_RootOrder
       value: 0
