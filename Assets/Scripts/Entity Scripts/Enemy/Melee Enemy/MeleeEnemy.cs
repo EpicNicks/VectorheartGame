@@ -49,7 +49,7 @@ public class MeleeEnemy : MonoBehaviour
 
     private void Hp_OnEnemyHPChanged(int newHP)
     {
-        //play hurt animation
+        animator.SetTrigger("isHit");//play hurt animation
         if (newHP <= 0)
         {
             Debug.Log($"Enemy {name} hp changed to {newHP}");
