@@ -87,6 +87,7 @@ public class PlayerStateManager
 
     public void Update()
     {
+        player.Anim.SetBool("isCharged", isCharged);
         state = state.OnUpdate();
     }
 
