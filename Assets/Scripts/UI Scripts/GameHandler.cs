@@ -62,7 +62,7 @@ public class GameHandler : MonoBehaviour {
     }
     private void Update()
     {
-        countWave.text = spawner.getWave().ToString();
+        countWave.text = (spawner.getWave() +1)+"";
     }
 
     private void PlayerHP_OnPlayerHPChanged(int newHP)
