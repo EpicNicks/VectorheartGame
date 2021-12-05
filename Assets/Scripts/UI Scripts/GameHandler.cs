@@ -14,6 +14,8 @@ public class GameHandler : MonoBehaviour {
     [SerializeField] private PlayerHP playerHP;
     [SerializeField] private CharacterInput characterInput;
     public TextMeshProUGUI countScore;
+    public TextMeshProUGUI countWave;
+    public SpawnerMaster spawner;
     public GameObject FailScreen;
 
     public TextMeshProUGUI finalScore;
@@ -57,6 +59,10 @@ public class GameHandler : MonoBehaviour {
        
         fullCooldown = characterInput.DashAttackCooldownSeconds;
         characterInput.OnDashCooldownSecondsChanged += characterInput_OnDDashCooldownSecondsChanged; 
+    }
+    private void Update()
+    {
+        countWave.text = spawner.getWave().ToString();
     }
 
     private void PlayerHP_OnPlayerHPChanged(int newHP)

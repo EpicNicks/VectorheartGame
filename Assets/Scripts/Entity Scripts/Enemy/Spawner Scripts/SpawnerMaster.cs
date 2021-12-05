@@ -44,5 +44,8 @@ public class SpawnerMaster : MonoBehaviour
     {
         spawners.Where(s => s.WaveId == curWave).ToList().ForEach(s => s.enabled = true);
     }
-    
+    public int getWave() {
+        return curWave;
+    }
+
 }
