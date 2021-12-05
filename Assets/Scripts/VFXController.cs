@@ -13,7 +13,6 @@ public class VFXController : MonoBehaviour
     public GameObject chargedDash;
     public GameObject dash;
     public GameObject running;
-    private bool isCharged = false;
 
     private CharacterInput character;
 
@@ -22,10 +21,9 @@ public class VFXController : MonoBehaviour
     public Transform feet;
     public Transform spinLocation;
 
-
     private Animator playerAnim;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         playerAnim = GetComponent<Animator>();
         character = GetComponent<CharacterInput>();
@@ -33,10 +31,11 @@ public class VFXController : MonoBehaviour
 
     public void SpinAttack()
     {
-        if(isCharged == true)
+        if(character.Psm.isCharged)
         {
             chargedSpinAttack.Play();
-        } else
+        }
+        else
         {
             spinAttack.Play();
         }
@@ -45,45 +44,45 @@ public class VFXController : MonoBehaviour
 
     public void StartTrail()
     {
-        if (isCharged == true)
+        if (character.Psm.isCharged)
         {
-            chargedAttack.SetActive(true);
+            chargedAttack?.SetActive(true);
         } else
         {
-            normalAttack.SetActive(true);
+            normalAttack?.SetActive(true);
         }
 
     }
 
     public void EndTrail()
     {
-        normalAttack.SetActive(false);
-        chargedAttack.SetActive(false);
+        normalAttack?.SetActive(false);
+        chargedAttack?.SetActive(false);
     }
 
     public void Ultimate()
     {
-        Instantiate(ultimateAbility, this.transform.position, this.transform.rotation);
+        Instantiate(ultimateAbility, transform.position, transform.rotation);
     }
 
     public void StartDashTrail()
     {
-        dash.SetActive(true);
+        dash?.SetActive(true);
     }
 
     public void EndDashTrail()
     {
-        dash.SetActive(false);
+        dash?.SetActive(false);
     }
 
     public void RightFootStep()
     {
 
-        Instantiate(running, rightFoot.position, new Quaternion(0, 0, 0, 1));
+        Instantiate(running, rightFoot.position, Quaternion.identity);
     }
 
     public void LeftFootStep()
     {
-        Instantiate(running, leftFoot.position, new Quaternion(0, 0, 0, 1));
+        Instantiate(running, leftFoot.position, Quaternion.identity);
     }
 }

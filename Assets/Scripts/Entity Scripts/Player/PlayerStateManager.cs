@@ -29,6 +29,9 @@ public class PlayerStateManager
 
     public event Action<int> OnEnergyChanged;
 
+    /// <summary>
+    /// if charge >= 75
+    /// </summary>
     public bool isCharged => curCharge >= 75;
     public bool fullCharged => curCharge == MaxCharge;
 
