@@ -15,6 +15,7 @@ public class GameHandler : MonoBehaviour {
     [SerializeField] private CharacterInput characterInput;
     public TextMeshProUGUI countScore;
     public GameObject FailScreen;
+
     public TextMeshProUGUI finalScore;
 
 
@@ -58,43 +59,47 @@ public class GameHandler : MonoBehaviour {
         characterInput.OnDashCooldownSecondsChanged += characterInput_OnDDashCooldownSecondsChanged; 
     }
 
-    //private void PlayerHP_OnPlayerHPChanged(int newHP)
-    //{
-    //    currentHPPercent = (float)newHP / fullHP;
-    //    healthBar.SetSize(currentHPPercent);
-
-    //    if (newHP <= 0)
-    //    {
-    //        FailScreen.SetActive(true);
-    //        Time.timeScale = 0f;
-    //    }
-    //}
     private void PlayerHP_OnPlayerHPChanged(int newHP)
     {
-        //currentHPPercent = (float)newHP / fullHP;
-        StartCoroutine(ChangeToHPPct((float)newHP));
+        currentHPPercent = (float)newHP / fullHP;
+        healthBarObject.fillAmount = currentHPPercent;
+
         if (newHP <= 0)
         {
             FailScreen.SetActive(true);
             Time.timeScale = 0f;
         }
     }
-    private IEnumerator ChangeToHPPct(float pct)
-    {
-        float preChangePct = healthBarObject.fillAmount;
-        float elapsed = 0f;
-        while(elapsed < updateSpeedSeconds)
-        {
-            elapsed += Time.deltaTime;
-            healthBarObject.fillAmount = Mathf.Lerp(preChangePct, pct, elapsed / updateSpeedSeconds);
-            yield return null;
-        }
-        healthBarObject.fillAmount = pct;
-    }
+
+
+
+    //private void PlayerHP_OnPlayerHPChanged(int newHP)
+    //{
+    //    //currentHPPercent = (float)newHP / fullHP;
+    //    StartCoroutine(ChangeToHPPct((float)newHP));
+    //    if (newHP <= 0)
+    //    {
+    //        FailScreen.SetActive(true);
+    //        Time.timeScale = 0f;
+    //    }
+    //}
+    //private IEnumerator ChangeToHPPct(float pct)
+    //{
+    //    float preChangePct = healthBarObject.fillAmount;
+    //    float elapsed = 0f;
+    //    while (elapsed < updateSpeedSeconds)
+    //    {
+    //        elapsed += Time.deltaTime;
+    //        healthBarObject.fillAmount = Mathf.Lerp(preChangePct, pct, elapsed / updateSpeedSeconds);
+    //        yield return null;
+    //    }
+    //    healthBarObject.fillAmount = pct;
+    //}
+
     private void characterInput_OnEnergyChanged(int newEnergy)
     {
-        //currentEnergyPercent = (float)newEnergy / fullEnergy;
-        StartCoroutine(ChangeToEnergyPct((float)newEnergy));
+        currentEnergyPercent = (float)newEnergy / fullEnergy;
+        energyBarObject.fillAmount = currentEnergyPercent;
         if (newEnergy >= fullEnergy)
         {
             UltMaskObject.SetActive(true);
@@ -104,18 +109,32 @@ public class GameHandler : MonoBehaviour {
             UltMaskObject.SetActive(false);
         }
     }
-    private IEnumerator ChangeToEnergyPct(float pct)
-    {
-        float preChangePct = energyBarObject.fillAmount;
-        float elapsed = 0f;
-        while (elapsed < updateSpeedSeconds)
-        {
-            elapsed += Time.deltaTime;
-            energyBarObject.fillAmount = Mathf.Lerp(preChangePct, pct, elapsed / updateSpeedSeconds);
-            yield return null;
-        }
-        energyBarObject.fillAmount = pct;
-    }
+
+    //private void characterInput_OnEnergyChanged(int newEnergy)
+    //{
+    //    //currentEnergyPercent = (float)newEnergy / fullEnergy;
+    //    StartCoroutine(ChangeToEnergyPct((float)newEnergy));
+    //    if (newEnergy >= fullEnergy)
+    //    {
+    //        UltMaskObject.SetActive(true);
+    //    }
+    //    else
+    //    {
+    //        UltMaskObject.SetActive(false);
+    //    }
+    //}
+    //private IEnumerator ChangeToEnergyPct(float pct)
+    //{
+    //    float preChangePct = energyBarObject.fillAmount;
+    //    float elapsed = 0f;
+    //    while (elapsed < updateSpeedSeconds)
+    //    {
+    //        elapsed += Time.deltaTime;
+    //        energyBarObject.fillAmount = Mathf.Lerp(preChangePct, pct, elapsed / updateSpeedSeconds);
+    //        yield return null;
+    //    }
+    //    energyBarObject.fillAmount = pct;
+    //}
     private void characterInput_OnDDashCooldownSecondsChanged(float newCooldown)
     {
         currentCoolDown = (float)newCooldown / fullCooldown;
