@@ -78,11 +78,11 @@ public class MeleeEnemy : MonoBehaviour
 
     private void Attack()
     {
-        if (curAttackCooldownSeconds >= attackCooldownSeconds)
+        if (curAttackCooldownSeconds >= attackCooldownSeconds && Vector2.Distance(transform.position, player.transform.position) <= attackFromDist)
         {
             //Make a cone slash
             animator.SetTrigger("isAttack");
-            Debug.Log("Attacking");
+            curAttackCooldownSeconds = 0;
         }
         curAttackCooldownSeconds += Time.deltaTime;
     }

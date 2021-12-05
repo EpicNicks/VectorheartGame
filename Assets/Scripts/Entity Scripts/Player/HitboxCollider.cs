@@ -29,7 +29,10 @@ public class HitboxCollider : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        collided.Add(collision);
+        if (!collided.Contains(collision))
+        {
+            collided.Add(collision);
+        }
     }
 
     public void StartStrike()
@@ -46,8 +49,11 @@ public class HitboxCollider : MonoBehaviour
         {
             foreach (var col in collided)
             {
-                player.DealDamageToEnemy(col.GetComponent<EnemyHP>(), damage);
-                Debug.Log($"Dealt {damage} damage to enemy: {col.gameObject.name}");
+                if (col != null)
+                {
+                    player.DealDamageToEnemy(col.GetComponent<EnemyHP>(), damage);
+                    Debug.Log($"Dealt {damage} damage to enemy: {col.gameObject.name}");
+                }
             }
         }
         collided.Clear();
