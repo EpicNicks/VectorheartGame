@@ -183,6 +183,7 @@ public class GameHandler : MonoBehaviour {
     {
         currentCoolDown = (float)newCooldown / fullCooldown;
         AbilityMaskObject.fillAmount = currentCoolDown;
+        Debug.Log("test");
     }
 
 }
