@@ -55,11 +55,12 @@ public class VFXController : MonoBehaviour
     {
         normalAttack?.SetActive(false);
         chargedAttack?.SetActive(false);
+        ultimateAbility.SetActive(false);
     }
 
     public void Ultimate()
     {
-        Instantiate(ultimateAbility, transform.position, transform.rotation);
+        ultimateAbility.SetActive(true);
     }
 
     public void StartDashTrail()
