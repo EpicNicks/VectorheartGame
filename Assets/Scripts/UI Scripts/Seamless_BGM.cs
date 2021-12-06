@@ -6,10 +6,10 @@ public class Seamless_BGM : MonoBehaviour
 {
    void Awake()
     {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("BGM");
-       if (objs.Length > 1)
-          Destroy(this.gameObject);
+       // GameObject[] objs = GameObject.FindGameObjectsWithTag("BGM");
+       //if (objs.Length > 1)
+         // Destroy(this.gameObject);
 
-        DontDestroyOnLoad(this.gameObject);
+       // DontDestroyOnLoad(this.gameObject);
     }
 }
