@@ -37264,6 +37264,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.16666667
+    functionName: attackSoundFX
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.2
     functionName: StartStrike
     data: 
@@ -37280,6 +37287,13 @@ AnimationClip:
     messageOptions: 0
   - time: 0.5
     functionName: StartStrike
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.53333336
+    functionName: attackSoundFX
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

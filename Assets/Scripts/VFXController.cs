@@ -85,4 +85,10 @@ public class VFXController : MonoBehaviour
     {
         Instantiate(running, leftFoot.position, Quaternion.identity);
     }
+
+    public void attackSoundFX()
+    {
+        playerSound.clip = attackSound;
+        playerSound.Play();
+    }
 }
