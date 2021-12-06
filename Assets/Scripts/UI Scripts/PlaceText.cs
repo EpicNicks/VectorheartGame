@@ -9,10 +9,10 @@ public class PlaceText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(fastChangeHPcolor());
+        StartCoroutine(placeText());
     }
 
-    private IEnumerator fastChangeHPcolor()
+    private IEnumerator placeText()
     {
 
             text1.SetActive(true);
