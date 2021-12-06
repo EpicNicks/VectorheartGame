@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject button;
 
+
     private void Start()
     {
         Cursor.visible = false;

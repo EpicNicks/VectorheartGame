@@ -15,6 +15,8 @@ public class MeleeEnemy : MonoBehaviour
     public int AttackDamage = 15;
     public int AttackRadius = 1;
 
+    private float speedMul = 1.0f;
+
     [SerializeField]
     private float moveSpeed = 1.0f;
     [SerializeField]
@@ -32,6 +34,10 @@ public class MeleeEnemy : MonoBehaviour
     private void Awake()
     {
         gameObject.AddComponent<DeathReporter>();
+        if (animator == null)
+        {
+            animator = GetComponentInChildren<Animator>();
+        }
     }
 
     void Start()
@@ -43,15 +49,17 @@ public class MeleeEnemy : MonoBehaviour
 
     private void Hp_OnEnemyHPChanged(int newHP)
     {
-        //play hurt animation
+        animator.SetTrigger("isHit");//play hurt animation
         if (newHP <= 0)
         {
+            Debug.Log($"Enemy {name} hp changed to {newHP}");
             //do death animation or whatever else
             animator.SetBool("isDead", true);
         }
     }
     void Update()
     {
+        // Debug.Log(animator.GetBool("isDead"));
         if (!animator.GetBool("isDead"))
         {
             MoveToPlayer();
@@ -60,25 +68,33 @@ public class MeleeEnemy : MonoBehaviour
     }
     private void MoveToPlayer()
     {
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position, -Vector3.forward);
+        if (Vector2.Distance(transform.position, player.transform.position) >= attackFromDist)
         {
-            transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position, -Vector3.forward);
-            if (Vector2.Distance(transform.position, player.transform.position) >= attackFromDist)
-            {
-                transform.position += transform.forward * moveSpeed * Time.deltaTime;
-                animator.SetBool("isRunning", true);
-            }
+            transform.position += transform.forward * moveSpeed * Time.deltaTime * speedMul;
+            animator.SetBool("isRunning", true);
         }
     }
 
     private void Attack()
     {
-        if (curAttackCooldownSeconds >= attackCooldownSeconds)
+        if (curAttackCooldownSeconds >= attackCooldownSeconds && Vector2.Distance(transform.position, player.transform.position) <= attackFromDist)
         {
             //Make a cone slash
-            animator.SetTrigger("Attack");
+            animator.SetTrigger("isAttack");
+            curAttackCooldownSeconds = 0;
         }
         curAttackCooldownSeconds += Time.deltaTime;
+    }
+
+    public void StopMoving()
+    {
+        speedMul = 0.0f;
+    }
+
+    public void ResumeMoving()
+    {
+        speedMul = 1.0f;
     }
 
     public void AttackAnimationEvent()

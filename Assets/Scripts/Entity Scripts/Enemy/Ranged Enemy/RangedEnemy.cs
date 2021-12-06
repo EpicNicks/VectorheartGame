@@ -35,7 +35,7 @@ public class RangedEnemy : MonoBehaviour
 
     private void Hp_OnEnemyHPChanged(int newHP)
     {
-        //play hurt animation
+        animator.SetTrigger("isHit");//play hurt animation
         if (newHP <= 0)
         {
             //do death animation or whatever else

@@ -75,7 +75,11 @@ public class CharacterInput : MonoBehaviour
     private void Awake()
     {
         psm = new PlayerStateManager(this);
-        psm.OnEnergyChanged += (energy) => OnEnergyChanged?.Invoke(energy);
+        psm.OnEnergyChanged += (energy) =>
+        {
+            OnEnergyChanged?.Invoke(energy);
+            anim.SetBool("isCharged", psm.isCharged);
+        };
         psm.DashCooldownSecondsChangedEvent += (cooldownSeconds) => OnDashCooldownSecondsChanged?.Invoke(cooldownSeconds);
         anim ??= GetComponent<Animator>();
     }
@@ -93,7 +97,7 @@ public class CharacterInput : MonoBehaviour
     {
         psm.ConsumeInput(ctx);
     }
-
+    #region SphereCast hitbox functions
     public void SpawnHitboxCone(string parameters)
     {
         string[] splitParams = parameters.Split(',');
@@ -151,7 +155,7 @@ public class CharacterInput : MonoBehaviour
             DealDamageToEnemy(hit.transform.GetComponent<EnemyHP>(), dmg);
         }
     }
-
+    #endregion
     public void DealDamageToEnemy(EnemyHP enemyHp, int damage)
     {
         if (enemyHp == null)

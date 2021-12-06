@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saberActive: 1
-  bladeColor: {r: 0, g: 0.69803953, b: 1, a: 1}
+  bladeColor: {r: 1, g: 0.21621194, b: 0, a: 1}
   trailsActivated: 1
   BladeExtendSpeed: 0.3
 --- !u!114 &5661266038142263874
@@ -155,7 +155,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.69803953, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.21621194, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 5
   m_SpotAngle: 30
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d09a5a31e4c3f438514d5dc370ffbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxTrail: {fileID: 8734723571383773104, guid: e5916f9742971d04ba99cb02568d7002, type: 3}
+  vfxTrail: {fileID: 8734723571383773104, guid: 0eba9c9691751414aa4debc916891fc6, type: 3}
   customSpawnPoint: {fileID: 8344095080284361529}
   autoActivateTrail: 1
 --- !u!1 &8344095080284361529
