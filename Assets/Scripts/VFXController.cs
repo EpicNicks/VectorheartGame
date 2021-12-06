@@ -66,8 +66,7 @@ public class VFXController : MonoBehaviour
     public void StartDashTrail()
     {
         dash?.SetActive(true);
-        playerSound.clip = dashSound;
-        playerSound.Play();
+        
     }
 
     public void EndDashTrail()
@@ -89,6 +88,12 @@ public class VFXController : MonoBehaviour
     public void attackSoundFX()
     {
         playerSound.clip = attackSound;
+        playerSound.Play();
+    }
+
+    public void dashSoundFX()
+    {
+        playerSound.clip = dashSound;
         playerSound.Play();
     }
 }
