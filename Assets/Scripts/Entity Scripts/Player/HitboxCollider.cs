@@ -11,7 +11,9 @@ public class HitboxCollider : MonoBehaviour
     [SerializeField]
     private Collider col;
 
-    private List<Collider> collided = new List<Collider>{};
+    private List<Collider> collided = new List<Collider> { };
+
+    public CameraShake cameraShake;
 
     private void Awake()
     {
@@ -32,12 +34,14 @@ public class HitboxCollider : MonoBehaviour
         if (!collided.Contains(collision))
         {
             collided.Add(collision);
+            StartCoroutine(cameraShake.Shake(.15f, .1f));
         }
     }
 
     public void StartStrike()
     {
         col.enabled = true;
+
     }
 
     /// <summary>
