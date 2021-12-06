@@ -37,6 +37,7 @@ public class GameHandler : MonoBehaviour {
     private int score;
     private int preWave;
     public Animator WaveAnimator;
+    private Color preColor;
     public int Score
     {
         get => score;
@@ -63,6 +64,7 @@ public class GameHandler : MonoBehaviour {
         characterInput.OnDashCooldownSecondsChanged += characterInput_OnDDashCooldownSecondsChanged;
         WaveAnimator.SetBool("newWave", false);
         preWave = 0;
+        preColor = healthBarObject.GetComponent<Image>().color;
     }
     private void Update()
     {
@@ -75,18 +77,39 @@ public class GameHandler : MonoBehaviour {
         {
             WaveAnimator.SetBool("newWave", false);
         }
-        
     }
 
     private void PlayerHP_OnPlayerHPChanged(int newHP)
     {
         currentHPPercent = (float)newHP / fullHP;
         healthBarObject.fillAmount = currentHPPercent;
-
+        StartCoroutine(changeHPcolor());
+        if(newHP<= 20)
+        {
+            StartCoroutine(fastChangeHPcolor());
+        }
         if (newHP <= 0)
         {
             FailScreen.SetActive(true);
             Time.timeScale = 0f;
+            Cursor.visible = true;
+        }
+    }
+    private IEnumerator changeHPcolor() {
+        
+        healthBarObject.GetComponent<Image>().color = Color.red;
+        yield return new WaitForSeconds(.5f);
+        healthBarObject.GetComponent<Image>().color = preColor;
+        yield return new WaitForSeconds(.5f);
+    }
+
+    private IEnumerator fastChangeHPcolor()
+    {
+        while(Time.timeScale != 0) { 
+        healthBarObject.GetComponent<Image>().color = Color.red;
+        yield return new WaitForSeconds(.1f);
+        healthBarObject.GetComponent<Image>().color = preColor;
+        yield return new WaitForSeconds(.1f);
         }
     }
 
@@ -123,12 +146,11 @@ public class GameHandler : MonoBehaviour {
         if (newEnergy >= fullEnergy)
         {
             UltMaskObject.SetActive(true);
-            UltMaskObject.GetComponent<Animator>().SetBool("UltReady", true);
+            UltMaskObject.GetComponent<Animator>().Play("UltReady",0,0.25f);
         }
         else
         {
             UltMaskObject.SetActive(false);
-            UltMaskObject.GetComponent<Animator>().SetBool("UltReady", false);
         }
     }
 
