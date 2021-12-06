@@ -214,7 +214,7 @@ MonoBehaviour:
   attackRadius: 1
   attackAngleDegrees: 45
   attackDamage: 50
-  dashDistance: 10
+  dashDistance: 6
   dashSeconds: 0.2
   dashAttackCooldownSeconds: 3
   dashAttackHitbox: {fileID: 0}

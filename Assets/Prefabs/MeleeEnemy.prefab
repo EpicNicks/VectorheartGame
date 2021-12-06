@@ -966,7 +966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8298388085657585971}
   AttackAngleDegrees: 60
-  AttackDamage: 15
+  AttackDamage: 5
   AttackRadius: 3
   moveSpeed: 7
   attackFromDist: 4
@@ -1017,10 +1017,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalAttack: {fileID: 8024941637667484132}
   chargedAttack: {fileID: 0}
-  chargedSpinAttack: {fileID: 0}
   spinAttack: {fileID: 0}
   ultimateAbility: {fileID: 0}
-  chargedDash: {fileID: 0}
   dash: {fileID: 0}
   running: {fileID: 0}
   leftFoot: {fileID: 0}
