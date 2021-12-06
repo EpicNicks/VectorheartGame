@@ -35,7 +35,8 @@ public class VFXController : MonoBehaviour
     public void SpinAttack()
     {
         spinAttack.Play();
-
+        playerSound.clip = spinSound;
+        playerSound.Play();
     }
 
     public void StartTrail()
@@ -64,6 +65,8 @@ public class VFXController : MonoBehaviour
     public void StartDashTrail()
     {
         dash?.SetActive(true);
+        playerSound.clip = dashSound;
+        playerSound.Play();
     }
 
     public void EndDashTrail()
