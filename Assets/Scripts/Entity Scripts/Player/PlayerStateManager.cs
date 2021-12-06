@@ -42,8 +42,7 @@ public class PlayerStateManager
         if (isCharged)
         {
             CurCharge = 0;
-            // uncomment when ultimate trigger exists
-            // player.Anim.SetTrigger("Ultimate");
+            player.Anim.SetTrigger("UltimateAbility");
         }
     }
 
@@ -259,6 +258,7 @@ public class PlayerStateManager
 
         private IEnumerator DashStrike()
         {
+            psm.player.Anim.SetBool("Dash", true);
             Vector2 dashDirection = psm.move;
             Vector2 initialPos = psm.player.transform.position;
             Vector2 destination = initialPos + dashDirection * psm.player.DashDistance;
@@ -288,6 +288,7 @@ public class PlayerStateManager
                 psm.player.DashAttackHitbox.enabled = false;
             }
             hasCompletedDash = true;
+            psm.player.Anim.SetBool("Dash", false);
         }
 
         public override PlayerState OnUpdate()
