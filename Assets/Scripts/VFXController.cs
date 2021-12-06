@@ -20,6 +20,11 @@ public class VFXController : MonoBehaviour
     public Transform spinLocation;
 
     private Animator playerAnim;
+    public AudioSource playerSound;
+    public AudioClip spinSound;
+    public AudioClip dashSound;
+    public AudioClip attackSound;
+
 
     private void Awake()
     {
@@ -29,8 +34,8 @@ public class VFXController : MonoBehaviour
 
     public void SpinAttack()
     {
-            spinAttack.Play();
-       
+        spinAttack.Play();
+
     }
 
     public void StartTrail()
