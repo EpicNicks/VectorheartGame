@@ -35,6 +35,8 @@ public class GameHandler : MonoBehaviour {
     public float updateSpeedSeconds = 0.5f;
 
     private int score;
+    private int preWave;
+    public Animator WaveAnimator;
     public int Score
     {
         get => score;
@@ -58,11 +60,22 @@ public class GameHandler : MonoBehaviour {
 
        
         fullCooldown = characterInput.DashAttackCooldownSeconds;
-        characterInput.OnDashCooldownSecondsChanged += characterInput_OnDDashCooldownSecondsChanged; 
+        characterInput.OnDashCooldownSecondsChanged += characterInput_OnDDashCooldownSecondsChanged;
+        WaveAnimator.SetBool("newWave", false);
+        preWave = 0;
     }
     private void Update()
     {
-        countWave.text = (spawner.getWave() +1)+"";
+        countWave.text = (spawner.getWave() + 1) + "";
+        if (preWave != (spawner.getWave() + 1)){
+            WaveAnimator.SetBool("newWave", true);
+            preWave = (spawner.getWave() + 1);
+        }
+        else
+        {
+            WaveAnimator.SetBool("newWave", false);
+        }
+        
     }
 
     private void PlayerHP_OnPlayerHPChanged(int newHP)
@@ -76,8 +89,6 @@ public class GameHandler : MonoBehaviour {
             Time.timeScale = 0f;
         }
     }
-
-
 
     //private void PlayerHP_OnPlayerHPChanged(int newHP)
     //{
@@ -100,7 +111,10 @@ public class GameHandler : MonoBehaviour {
     //        yield return null;
     //    }
     //    healthBarObject.fillAmount = pct;
+    //    Debug.Log(pct);
     //}
+
+
 
     private void characterInput_OnEnergyChanged(int newEnergy)
     {
@@ -109,10 +123,12 @@ public class GameHandler : MonoBehaviour {
         if (newEnergy >= fullEnergy)
         {
             UltMaskObject.SetActive(true);
+            UltMaskObject.GetComponent<Animator>().SetBool("UltReady", true);
         }
         else
         {
             UltMaskObject.SetActive(false);
+            UltMaskObject.GetComponent<Animator>().SetBool("UltReady", false);
         }
     }
 
