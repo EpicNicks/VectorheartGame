@@ -35,6 +35,24 @@ public class LaserBeam : MonoBehaviour
     [SerializeField]
     private AudioClip onDestroyAudioClip;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
+    [SerializeField]
+    [Range(0, 1)]
+    private float bounceVolume;
+    [SerializeField]
+    [Range(0, 1)]
+    private float onDestroyVolume;
+
+    private void Awake()
+    {
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, transform.position + transform.up * 3.0f);
@@ -76,7 +94,7 @@ public class LaserBeam : MonoBehaviour
                 curBounces++;
                 if (bounceAudioClip != null)
                 {
-                    AudioSource.PlayClipAtPoint(bounceAudioClip, transform.position);
+                    audioSource.PlayOneShot(bounceAudioClip, bounceVolume);
                 }
             }
             else
@@ -113,7 +131,7 @@ public class LaserBeam : MonoBehaviour
     {
         if (onDestroyAudioClip != null)
         {
-            AudioSource.PlayClipAtPoint(onDestroyAudioClip, transform.position);
+            audioSource.PlayOneShot(onDestroyAudioClip, onDestroyVolume);
         }
     }
 }
