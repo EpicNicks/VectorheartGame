@@ -175,7 +175,7 @@ public class PlayerStateManager
             {
                 return new AttackingState(psm);
             }
-            if (ctx.action.name.Equals("Dash") && ctx.action.phase == InputActionPhase.Started && curDashCooldownSeconds <= 0 && psm.isCharged)
+            if (ctx.action.name.Equals("Dash") && ctx.action.phase == InputActionPhase.Started && curDashCooldownSeconds <= 0)
             {
                 return new DashState(psm);
             }
