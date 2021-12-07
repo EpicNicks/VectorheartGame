@@ -33,6 +33,8 @@ public class VFXController : MonoBehaviour
     public AudioClip playerHurt;
     public AudioClip playerUlt;
 
+    public AudioSource playerHurtSource;
+
 
 
     private void Awake()
@@ -138,7 +140,7 @@ public class VFXController : MonoBehaviour
 
     public void playerHurtSoundFX()
     {
-        playerSound.clip = playerHurt;
-        playerSound.Play();
+        playerHurtSource.clip = playerHurt;
+        playerHurtSource.Play();
     }
 }

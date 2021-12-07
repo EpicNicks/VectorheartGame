@@ -37299,17 +37299,17 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.6666667
+    functionName: EndTrail
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.7
     functionName: FinishStrike
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 50
-    messageOptions: 0
-  - time: 1.2333333
-    functionName: EndTrail
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
     messageOptions: 0

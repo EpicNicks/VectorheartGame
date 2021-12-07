@@ -21111,6 +21111,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.031928316
       objectReference: {fileID: 0}
+    - target: {fileID: 6025933289901327706, guid: 4307cc3e660ff8e43aa79e3745326179, type: 3}
+      propertyPath: playerHurtSource
+      value: 
+      objectReference: {fileID: 1868277463}
     - target: {fileID: 6437550129364251792, guid: 4307cc3e660ff8e43aa79e3745326179, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 54.32681
@@ -21212,6 +21216,11 @@ PrefabInstance:
 --- !u!1 &1868277462 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 331654151021456555, guid: 4307cc3e660ff8e43aa79e3745326179, type: 3}
+  m_PrefabInstance: {fileID: 1868277461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1868277463 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 530295834147516306, guid: 4307cc3e660ff8e43aa79e3745326179, type: 3}
   m_PrefabInstance: {fileID: 1868277461}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1891863252
