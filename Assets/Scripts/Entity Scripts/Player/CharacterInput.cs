@@ -13,6 +13,10 @@ public class CharacterInput : MonoBehaviour
 
     #region Inspector Data
     [SerializeField]
+    private Rigidbody rbod;
+    public Rigidbody Rbod => rbod;
+
+    [SerializeField]
     private float moveSpeed;
     public float MoveSpeed => moveSpeed;
     [SerializeField]
@@ -81,6 +85,10 @@ public class CharacterInput : MonoBehaviour
             anim.SetBool("isCharged", psm.isCharged);
         };
         psm.DashCooldownSecondsChangedEvent += (cooldownSeconds) => OnDashCooldownSecondsChanged?.Invoke(cooldownSeconds);
+        if (rbod == null)
+        {
+            rbod = GetComponent<Rigidbody>();
+        }
         anim ??= GetComponent<Animator>();
     }
 

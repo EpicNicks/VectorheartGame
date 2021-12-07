@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(EnemyHP))]
@@ -57,8 +58,12 @@ public class RangedEnemy : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position, -Vector3.forward);
         if (Vector2.Distance(transform.position, player.transform.position) >= attackFromDist)
         {
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
-            animator.SetBool("isRunning", true);
+            var rc = Physics2D.RaycastAll(transform.position + 2 * transform.forward, transform.forward, 0.8f);
+            if (rc.Where(c => !c.transform.CompareTag("Enemy")).Count() == 0)
+            {
+                transform.position += transform.forward * moveSpeed * Time.deltaTime;
+                animator.SetBool("isRunning", true);
+            }
         }
         else
         {
