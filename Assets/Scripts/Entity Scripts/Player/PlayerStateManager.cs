@@ -32,7 +32,7 @@ public class PlayerStateManager
     /// <summary>
     /// if charge >= 75
     /// </summary>
-    public bool isCharged => curCharge >= 75;
+    public bool isCharged => curCharge >= MaxCharge * player.ChargedPercent;
     public bool fullCharged => curCharge == MaxCharge;
 
     public event Action<float> DashCooldownSecondsChangedEvent;

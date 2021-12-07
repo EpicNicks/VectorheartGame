@@ -55,6 +55,11 @@ public class CharacterInput : MonoBehaviour
     private Vector2 energyToHPConversionRate;
 
     [SerializeField]
+    [Range(0, 1)]
+    private float chargedPercent;
+    public float ChargedPercent => chargedPercent;
+
+    [SerializeField]
     private Collider dashAttackHitbox;
     public Collider DashAttackHitbox => dashAttackHitbox;
 
