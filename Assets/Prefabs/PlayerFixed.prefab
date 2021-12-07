@@ -184,6 +184,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e617bc5e-cb2d-48d7-b990-21535aefd72a
     m_ActionName: MovementMap/Ultimate[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 491480196172109511}
+        m_TargetAssemblyTypeName: CharacterInput, Assembly-CSharp
+        m_MethodName: Heal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f06d99e1-078c-48a9-9e8c-edd26ccda664
+    m_ActionName: MovementMap/Heal[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: MovementMap
@@ -231,6 +247,7 @@ MonoBehaviour:
   dashDistance: 6
   dashSeconds: 0.2
   dashAttackCooldownSeconds: 3
+  energyToHPConversionRate: {x: 0, y: 0}
   dashAttackHitbox: {fileID: 0}
   attackVfx: {fileID: 0}
   dashSfx: {fileID: 0}
