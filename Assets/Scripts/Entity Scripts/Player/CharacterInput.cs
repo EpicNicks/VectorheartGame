@@ -193,7 +193,8 @@ public class CharacterInput : MonoBehaviour
             int availableCharge = psm.CurCharge;
             psm.CurCharge = 0;
             PlayerHP hp = GetComponent<PlayerHP>();
-            hp.HP += (int) (availableCharge * energyToHPConversionRate.y / energyToHPConversionRate.x);
+            if (energyToHPConversionRate.x != 0)
+                hp.HP += (int) (availableCharge * energyToHPConversionRate.y / energyToHPConversionRate.x);
         }
     }
 
