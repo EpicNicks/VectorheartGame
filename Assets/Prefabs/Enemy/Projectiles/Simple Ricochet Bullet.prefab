@@ -158,7 +158,7 @@ MonoBehaviour:
     m_Bits: 64
   canHurt: -1
   numDeflectionBounces: 5
-  damage: 5
+  damage: 2
   speed: 25
   bounceAudioClip: {fileID: 8300000, guid: 274219314ee0d426c8e13ca77c2c4674, type: 3}
   onDestroyAudioClip: {fileID: 0}

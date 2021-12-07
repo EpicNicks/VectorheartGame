@@ -690,7 +690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 6207118635806531556}
   moveSpeed: 5
-  attackFromDist: 17
+  attackFromDist: 10
   attackCooldownSeconds: 3
   projectile: {fileID: 2062294832675785325, guid: 68842927e72d126448ed077a897288f0, type: 3}
   attackSfx: {fileID: 0}
@@ -756,6 +756,8 @@ MonoBehaviour:
   hurtSound: {fileID: 8300000, guid: 61dd6a7a822e162439ae5780db0e6e23, type: 3}
   hurtSoundMelee: {fileID: 0}
   enemyMeleeSwordSound: {fileID: 0}
+  playerHurt: {fileID: 0}
+  playerUlt: {fileID: 0}
 --- !u!82 &8319571901685019452
 AudioSource:
   m_ObjectHideFlags: 0
