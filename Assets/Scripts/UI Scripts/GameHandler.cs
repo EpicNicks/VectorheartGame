@@ -38,6 +38,7 @@ public class GameHandler : MonoBehaviour {
     private int preWave;
     public Animator WaveAnimator;
     private Color preColor;
+    public ParticleSystem particle;
     public int Score
     {
         get => score;
@@ -65,6 +66,10 @@ public class GameHandler : MonoBehaviour {
         WaveAnimator.SetBool("newWave", false);
         preWave = 0;
         preColor = healthBarObject.GetComponent<Image>().color;
+
+
+        var main = particle.main;
+        main.maxParticles = 0;
     }
     private void Update()
     {
@@ -141,8 +146,10 @@ public class GameHandler : MonoBehaviour {
 
     private void characterInput_OnEnergyChanged(int newEnergy)
     {
+        var main = particle.main;
         currentEnergyPercent = (float)newEnergy / fullEnergy;
         energyBarObject.fillAmount = currentEnergyPercent;
+        main.maxParticles = (int)(currentEnergyPercent * 1000);
         if (newEnergy >= fullEnergy)
         {
             UltMaskObject.SetActive(true);
