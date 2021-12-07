@@ -24,6 +24,13 @@ public class VFXController : MonoBehaviour
     public AudioClip spinSound;
     public AudioClip dashSound;
     public AudioClip attackSound;
+    public AudioSource enemyShootSound;
+    public AudioClip shootSound;
+    public AudioSource enemyMeleeSound;
+    public AudioClip hurtSound;
+    public AudioClip hurtSoundMelee;
+    public AudioClip enemyMeleeSwordSound;
+
 
 
     private void Awake()
@@ -95,5 +102,29 @@ public class VFXController : MonoBehaviour
     {
         playerSound.clip = dashSound;
         playerSound.Play();
+    }
+
+    public void enemyShootFX()
+    {
+        enemyShootSound.clip = shootSound;
+        enemyShootSound.Play();
+    }
+
+    public void enemyShootHitFX()
+    {
+        enemyShootSound.clip = hurtSound;
+        enemyShootSound.Play();
+    }
+
+    public void enemyMeleeSoundHitFX()
+    {
+        enemyMeleeSound.clip = hurtSoundMelee;
+        enemyMeleeSound.Play();
+    }
+
+    public void enemyMeleeSoundFX()
+    {
+        enemyMeleeSound.clip = enemyMeleeSwordSound;
+        enemyMeleeSound.Play();
     }
 }
