@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LaserBeam : MonoBehaviour
@@ -76,9 +77,26 @@ public class LaserBeam : MonoBehaviour
         }
     }
 
+    private void CheckHit3D()
+    {
+        RaycastHit[] hits = Physics.SphereCastAll(transform.position, 0.4f, transform.up, Time.deltaTime * speed + colRadius, collisionMask);
+        if (hits.Any(h => h.transform.CompareTag("Player")))
+        {
+            RaycastHit player = hits.First(h => h.transform.CompareTag("Player"));
+            PlayerHP playerHp = player.transform.GetComponent<PlayerHP>();
+            if (playerHp != null)
+            {
+                Debug.Log("hit player 3D");
+                playerHp.HP -= damage;
+                Destroy(gameObject);
+            }
+        }
+    }
+
     void Update()
     {
         transform.Translate(Vector3.up * Time.deltaTime * speed);
         CheckBounce();
+        CheckHit3D();
     }
 }
