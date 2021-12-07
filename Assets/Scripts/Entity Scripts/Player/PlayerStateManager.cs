@@ -196,16 +196,26 @@ public class PlayerStateManager
         {
             base.OnUpdate();
             psm.player.transform.rotation = Quaternion.LookRotation(new Vector3(psm.move.x, psm.move.y, 0), psm.player.transform.up);
-            psm.player.transform.position += psm.player.transform.forward * (psm.isSprinting ? psm.player.SprintSpeed : psm.player.MoveSpeed) * Time.deltaTime;
+            
+            var rc = Physics2D.RaycastAll(psm.player.transform.position + 2 * psm.player.transform.forward, psm.player.transform.forward, 0.8f);
+            if (rc.Where(c => !c.transform.CompareTag("Enemy")).Count() == 0)
+            {
+                psm.player.transform.position += psm.player.transform.forward * (psm.isSprinting ? psm.player.SprintSpeed : psm.player.MoveSpeed) * Time.deltaTime;
+            }
             return this;
         }
     }
 
     private class AttackingState : MovingState
     {
+        private string[] attackStateNames = { "mixamo_com", "PlayerAttackNormal", "PlayerSpinComboAttack" };
+
         public AttackingState(PlayerStateManager psm) : base(psm) 
         {
-            psm.player.Anim?.SetTrigger("isAttack");
+            if (!attackStateNames.Any(s => psm.player.Anim.GetCurrentAnimatorStateInfo(0).IsName(s)))
+            {
+                psm.player.Anim?.SetTrigger("isAttack");
+            }
         }
         public override PlayerState OnInput(InputAction.CallbackContext ctx)
         {
