@@ -11,6 +11,6 @@ comes from the [Vectorheart](https://cari.institute/aesthetics/vectorheart) arts
 
 ## Link to itch.io builds:
 
-[initial build](https://avanic-insanity.itch.io/neon-break)
+[initial build](https://avanic-insanity.itch.io/neon-break) (Project 3)
 
-polished build: TBD
+[polished build](https://avanic-insanity.itch.io/neon-break) (Project 4)
