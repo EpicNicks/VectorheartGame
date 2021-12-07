@@ -160,6 +160,8 @@ MonoBehaviour:
   numDeflectionBounces: 5
   damage: 5
   speed: 25
+  bounceAudioClip: {fileID: 8300000, guid: 274219314ee0d426c8e13ca77c2c4674, type: 3}
+  onDestroyAudioClip: {fileID: 0}
 --- !u!1 &8889737241305069598
 GameObject:
   m_ObjectHideFlags: 0

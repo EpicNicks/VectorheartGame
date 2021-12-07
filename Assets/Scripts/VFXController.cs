@@ -30,6 +30,8 @@ public class VFXController : MonoBehaviour
     public AudioClip hurtSound;
     public AudioClip hurtSoundMelee;
     public AudioClip enemyMeleeSwordSound;
+    public AudioClip playerHurt;
+    public AudioClip playerUlt;
 
 
 
@@ -126,5 +128,17 @@ public class VFXController : MonoBehaviour
     {
         enemyMeleeSound.clip = enemyMeleeSwordSound;
         enemyMeleeSound.Play();
+    }
+
+    public void ultSoundFX()
+    {
+        playerSound.clip = playerUlt;
+        playerSound.Play();
+    }
+
+    public void playerHurtSoundFX()
+    {
+        playerSound.clip = playerHurt;
+        playerSound.Play();
     }
 }
