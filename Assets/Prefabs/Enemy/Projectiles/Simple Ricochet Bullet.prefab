@@ -156,7 +156,7 @@ MonoBehaviour:
   collisionMask:
     serializedVersion: 2
     m_Bits: 64
-  canHurt: 1
+  canHurt: -1
   numDeflectionBounces: 10
   damage: 10
   speed: 50
