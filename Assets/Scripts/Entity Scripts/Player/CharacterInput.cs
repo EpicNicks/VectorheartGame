@@ -91,6 +91,7 @@ public class CharacterInput : MonoBehaviour
     {
         if (playerHP == null)
         {
+            playerHP = GetComponent<PlayerHP>();
             playerHP.OnPlayerHPChanged += (oldHp, newHp) =>
             {
                 if (oldHp > newHp)
