@@ -52,6 +52,9 @@ public class CharacterInput : MonoBehaviour
     public event System.Action<float> OnDashCooldownSecondsChanged;
 
     [SerializeField]
+    private Vector2 energyToHPConversionRate;
+
+    [SerializeField]
     private Collider dashAttackHitbox;
     public Collider DashAttackHitbox => dashAttackHitbox;
 
@@ -181,6 +184,18 @@ public class CharacterInput : MonoBehaviour
     {
         Debug.Log("Ultimate pressed");
         psm.Ultimate();
+    }
+
+    public void Heal(InputAction.CallbackContext ctx)
+    {
+        if (psm.CurCharge > 0)
+        {
+            int availableCharge = psm.CurCharge;
+            psm.CurCharge = 0;
+            PlayerHP hp = GetComponent<PlayerHP>();
+            if (energyToHPConversionRate.x != 0)
+                hp.HP += (int) (availableCharge * energyToHPConversionRate.y / energyToHPConversionRate.x);
+        }
     }
 
     public void UltimateStart()
