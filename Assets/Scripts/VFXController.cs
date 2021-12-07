@@ -65,7 +65,7 @@ public class VFXController : MonoBehaviour
         ultimateAbility.SetActive(false);
     }
 
-    public void Ultimate()
+    public void doUltimate()
     {
         ultimateAbility.SetActive(true);
     }

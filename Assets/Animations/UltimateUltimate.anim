@@ -7031,7 +7031,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2.2666667
-        value: 20
+        value: 55
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -34846,7 +34846,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2.2666667
-        value: 20
+        value: 55
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -53339,14 +53339,35 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: Ultimate
+    functionName: UltimateStart
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
+    functionName: doUltimate
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.2666667
+    functionName: UltimateHitbox
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 3.1333334
+    functionName: EndTrail
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 3.2666667
-    functionName: EndTrail
+    functionName: UltimateEnd
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
