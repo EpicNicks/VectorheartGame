@@ -11,6 +11,9 @@ public class CharacterInput : MonoBehaviour
     private Animator anim;
     public Animator Anim => anim;
 
+    [SerializeField]
+    private PlayerHP playerHP;
+
     #region Inspector Data
     [SerializeField]
     private Rigidbody rbod;
@@ -86,12 +89,23 @@ public class CharacterInput : MonoBehaviour
 
     private void Awake()
     {
+        if (playerHP == null)
+        {
+            playerHP.OnPlayerHPChanged += (oldHp, newHp) =>
+            {
+                if (oldHp > newHp)
+                {
+                    anim.SetTrigger("gotHit");
+                }
+            };
+        }
         psm = new PlayerStateManager(this);
         psm.OnEnergyChanged += (energy) =>
         {
             OnEnergyChanged?.Invoke(energy);
             anim.SetBool("isCharged", psm.isCharged);
         };
+        
         psm.DashCooldownSecondsChangedEvent += (cooldownSeconds) => OnDashCooldownSecondsChanged?.Invoke(cooldownSeconds);
         if (rbod == null)
         {
@@ -197,9 +211,8 @@ public class CharacterInput : MonoBehaviour
         {
             int availableCharge = psm.CurCharge;
             psm.CurCharge = 0;
-            PlayerHP hp = GetComponent<PlayerHP>();
             if (energyToHPConversionRate.x != 0)
-                hp.HP += (int) (availableCharge * energyToHPConversionRate.y / energyToHPConversionRate.x);
+                playerHP.HP += (int) (availableCharge * energyToHPConversionRate.y / energyToHPConversionRate.x);
         }
     }
 

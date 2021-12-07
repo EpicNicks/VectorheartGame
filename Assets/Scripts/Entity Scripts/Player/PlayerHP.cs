@@ -9,10 +9,11 @@ public class PlayerHP : MonoBehaviour
         get => hp;
         set
         {
-            OnPlayerHPChanged?.Invoke(hp = value);
+            OnPlayerHPChanged?.Invoke(hp, value);
+            hp = value;
         }
     }
 
-    public delegate void PlayerHPChanged(int newHP);
+    public delegate void PlayerHPChanged(int oldHP, int newHP);
     public event PlayerHPChanged OnPlayerHPChanged;
 }
