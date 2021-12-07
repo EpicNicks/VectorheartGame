@@ -10586,7 +10586,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'LEFT CLICK TO ATTACK
 
-    RIGHT CLICK TO ULT ATTACK!'
+    E TO ULT ATTACK!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a542b0517dc084b558d3a76b03ecd01e, type: 2}
   m_sharedMaterial: {fileID: -9089077522764555550, guid: a542b0517dc084b558d3a76b03ecd01e, type: 2}
