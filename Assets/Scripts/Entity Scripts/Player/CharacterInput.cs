@@ -179,12 +179,13 @@ public class CharacterInput : MonoBehaviour
 
     public void Ultimate(InputAction.CallbackContext ctx)
     {
+        Debug.Log("Ultimate pressed");
         psm.Ultimate();
     }
 
     public void UltimateStart()
     {
-        psm.ForceIdle();
+        psm.ForceIdle();    
     }
 
     public void UltimateHitbox()

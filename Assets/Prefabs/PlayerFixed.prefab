@@ -169,7 +169,19 @@ MonoBehaviour:
     m_ActionId: c50f46e0-1620-45c8-86df-bf40c002524a
     m_ActionName: MovementMap/Pause[/Keyboard/escape]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 491480196172109511}
+        m_TargetAssemblyTypeName: CharacterInput, Assembly-CSharp
+        m_MethodName: Ultimate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e617bc5e-cb2d-48d7-b990-21535aefd72a
     m_ActionName: MovementMap/Ultimate[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
@@ -209,6 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 491480196172109510}
+  rbod: {fileID: 0}
   moveSpeed: 15
   sprintSpeed: 15
   idleSecondsToPlayIdleAnim: 3
@@ -305,6 +318,12 @@ MonoBehaviour:
   spinSound: {fileID: 8300000, guid: fa9aa82120c7042f7b62050e8df1ec39, type: 3}
   dashSound: {fileID: 8300000, guid: f485613bb337a4338adc28b3b542b955, type: 3}
   attackSound: {fileID: 8300000, guid: eeb7fb8ae47e54c3fa27733ac33c2016, type: 3}
+  enemyShootSound: {fileID: 0}
+  shootSound: {fileID: 0}
+  enemyMeleeSound: {fileID: 0}
+  hurtSound: {fileID: 0}
+  hurtSoundMelee: {fileID: 0}
+  enemyMeleeSwordSound: {fileID: 0}
 --- !u!82 &1156683362480400265
 AudioSource:
   m_ObjectHideFlags: 0
