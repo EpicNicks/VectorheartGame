@@ -22,7 +22,7 @@ public class PlayerStateManager
         get => curCharge;
         set
         {
-            curCharge = Mathf.Min(curCharge + value, MaxCharge);
+            curCharge = Mathf.Min(value, MaxCharge);
             OnEnergyChanged?.Invoke(curCharge);
         }
     }

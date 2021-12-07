@@ -51,13 +51,10 @@ public class HitboxCollider : MonoBehaviour
     {
         if (collided != null)
         {
-            foreach (var col in collided)
+            foreach (var hp in collided.Where(c => c != null).Select(c => c.GetComponent<EnemyHP>()).Where(c => c != null))
             {
-                if (col != null)
-                {
-                    player.DealDamageToEnemy(col.GetComponent<EnemyHP>(), damage);
-                    Debug.Log($"Dealt {damage} damage to enemy: {col.gameObject.name}");
-                }
+                player.DealDamageToEnemy(hp, damage);
+                Debug.Log($"Dealt {damage} damage to enemy: {hp.gameObject.name}");
             }
         }
         collided.Clear();
