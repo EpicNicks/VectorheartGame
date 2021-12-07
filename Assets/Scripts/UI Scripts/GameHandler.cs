@@ -84,7 +84,7 @@ public class GameHandler : MonoBehaviour {
         }
     }
 
-    private void PlayerHP_OnPlayerHPChanged(int newHP)
+    private void PlayerHP_OnPlayerHPChanged(int oldHP, int newHP)
     {
         currentHPPercent = (float)newHP / fullHP;
         healthBarObject.fillAmount = currentHPPercent;
