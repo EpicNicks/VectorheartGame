@@ -158,8 +158,8 @@ MonoBehaviour:
     m_Bits: 64
   canHurt: -1
   numDeflectionBounces: 5
-  damage: 10
-  speed: 50
+  damage: 5
+  speed: 25
 --- !u!1 &8889737241305069598
 GameObject:
   m_ObjectHideFlags: 0

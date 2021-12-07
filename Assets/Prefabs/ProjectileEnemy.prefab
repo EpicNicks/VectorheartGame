@@ -690,7 +690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 6207118635806531556}
   moveSpeed: 5
-  attackFromDist: 15
+  attackFromDist: 17
   attackCooldownSeconds: 3
   projectile: {fileID: 2062294832675785325, guid: 68842927e72d126448ed077a897288f0, type: 3}
   attackSfx: {fileID: 0}
