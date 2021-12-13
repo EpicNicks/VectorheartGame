@@ -9,7 +9,7 @@ comes from the [Vectorheart](https://cari.institute/aesthetics/vectorheart) arts
 <b>UI/UX Designer, UI Programmer</b>: Xinyang "Ian" Wang<br>
 <b>2D and UI Artist, Music Composer</b>: Lukas Radlin<br>
 
-## Links to builds
+## Links to [builds](https://github.com/EpicNicks/VectorheartGame/releases)
 
 [initial build](https://github.com/EpicNicks/VectorheartGame/releases/tag/Project_3)
 
